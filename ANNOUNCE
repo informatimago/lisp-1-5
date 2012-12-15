@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------
+
+I've copied the Listing 'LISP1.5-Bonnie-sBirthdayAssembly.pdf' to an
+ASCII file that can be assembled with asm7090.  The same layout of
+listing output is obtained (the addresses at the bottom of each
+listing page match).  But I've not tried to run it on the 7090
+emulator yet. 
+
+If you find any difference (other than what's mentionned in the README
+file) between lisp15.asm and LISP1.5-Bonnie-sBirthdayAssembly.pdf,
+please tell me!
+
+Also, the README file suggests some modifications that could be
+implemented in asm7090 to move it closer to "Bonnie's assembler".
+
+
+The LISP15 transcription is now available thru git:
+git clone http://git.informatimago.com/public/lisp15
+
+The original Listing:
+http://community.computerhistory.org/scc/projects/LISP/LISP1.5-Bonnie-sBirthdayAssembly.pdf
+
+The asm7090:
+http://www.cozx.com/~dpitts/ibm7090.html
+
+
+
+Pascal J. Bourguignon
+mailto:pjb@informatimago.com
+----------------------------------------------------------------------------------
