@@ -1,4 +1,4 @@
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0001
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0001
 
 
                              2  *                                                                       PAGE 001
@@ -9,19 +9,19 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                              7         END                                                                      
                              8  ZST    MACRO                                                                    
                              9         END                                                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0002
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0002
 
 
                             11  *                                                                       PAGE 002
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0003
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0003
 
 
                             13  *                                                                       PAGE 003
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0004
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0004
 
 
                             15  *                                                                       PAGE 004
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0005
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0005
 
 
                             17  *                                                                       PAGE 005
@@ -29,7 +29,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                             19  * mode: asm                                                                     
                             20  * eval: (when (fboundp 'asm7090) (asm7090))                                     
                             21  * End:                                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0006
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0006
 
 
                             23         PCC ON                                                           PAGE 006
@@ -88,7 +88,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  77761   2 00002 4 77751    76         TIX     LOAD9,4,2         ADVANCE TO NEXT ROW                            
  77762  -2 00015 5 77725    77         TNX     LOAD+1,5,13       OUT AFTER RIGHT HALF                   PAGE 007
  77763   0762 00 0 01321    78         RCDA                      START NEXT CARD                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0007
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0007
 
 
  77764   1 00014 5 77751    79         TXI     LOAD9,5,12        ADVANCE TO RIGHT HALF CARD                     
@@ -147,7 +147,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00152   2 00001 4 00150   132         TIX     *-2,4,1                                                          
  00153   0774 00 4 00366   133         AXT     BSRECL,4           LENGTH OF BOOTSTRAP RECORD                    
  00154  -0754 00 0 00000   134         PXD     ,0,                CLEAR THE AC                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0008
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0008
 
 
  00155   0361 00 4 00532   135         ACL     CHKSUM,4           COMPUTE THE CHECK SUM FOR RECORD              
@@ -206,7 +206,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00227   0522 00 0 00356   188         XEC     $TEF               TURN OFF INDICATOR                            
  00230   0522 00 0 00350   189   RTRD  XEC     $RDS               SELECT TAPE                                   
  00231  -0754 00 0 00000   190         PXD     0,0                CLEAR AC                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0009
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0009
 
 
  00232  -0774 00 5 00274   191         AXC     RTIOC,5            POINTER TO I-O COMMAND                        
@@ -265,7 +265,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00311   0120 00 0 00313   244         TPL     *+2                TAPE IN NORMAL DENSITH (BIN=HI, BCD=LO        
  00312   0322 00 0 00347   245         ERA     IOSBB              CHANGE DENSITY BIT                            
  00313   0621 00 0 00354   246         STA     $SDN                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0010
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0010
 
 
  00314   0522 00 0 00354   247         XEC     $SDN                                                             
@@ -324,7 +324,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    00276   300   (IOS) SYN     B$(IOS)                                                          
                    77724   301   LOAD  SYN     LOADER                                                           
                    00346   302   (IOU) SYN     B$IOU                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0011
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0011
 
 
                            303         EJECT                                                                    
@@ -383,7 +383,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00447   0 00024 0 00000   356   QD20  PZE     ,,20                                                             
  00450   0 00025 0 00000   357   QD21  PZE     ,,21                                                     PAGE 013
  00451  -1 00000 0 00000   358  QP5    STR                                                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0012
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0012
 
 
  00452   600000000000      359  OBLANK BCI     1, 00000                                                         
@@ -437,7 +437,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00530   0 06167 0 00000   407   H40D  PZE     ,,H40                                                            
  00531   0 06223 0 00000   408   H74D  PZE     ,,H74                                                            
                    00000   409  ECONAT SYN     H740               END OF CONSTANT ATOMS                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0013
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0013
 
 
                            410         EJECT                                                                    
@@ -496,7 +496,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00611   0074 00 4 01222   463         TSX     OUTPUT,4           WRITE CHANGE TAPE MESSAGE                     
  00612  -0 00000 0 00364   464         MZE     BCDOUT                                                   PAGE 015
  00613   0 00007 0 00620   465                 WERM,,7                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0014
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0014
 
 
  00614   0420 00 0 00003   466         HPR     3                                                                
@@ -555,7 +555,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00675   0774 00 4 00000   519   INX4  AXT     **,4               RESTORE LINK IR                               
  00676   0020 00 4 00005   520         TRA 5,4                                                                  
  00677   0534 00 4 00675   521         LXA     INX4,4             RESTORE LINK IR                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0015
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0015
 
 
  00700  -0120 00 4 00003   522         TMI 3,4                                                                  
@@ -614,7 +614,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  00762   0544 00 0 01174   575   B5    LCHA LR                    DELAY UNTIL 8 IN, START READING 7             
  00763   0560 00 0 77665   576         LDQ 8L                     USE 8 ROW AS SUM                              
  00764  -0600 00 0 77663   577         STQ LS                     X                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0016
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0016
 
 
  00765   0560 00 0 77666   578         LDQ 8R                     X                                             
@@ -673,7 +673,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01052  -0320 00 0 77670   631         ANA RZ              IN RIGHT ROWS                                        
  01053   0320 00 0 77664   632         ANS RS              X                                                    
  01054   0074 00 2 01110   633         TSX C1,2            ENTER CONVERSION LOOP                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0017
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0017
 
 
  01055  -3 00000 0 01063   634         TXL B15             LEAVE CONVERSION LOOP                                
@@ -732,7 +732,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01142  -0763 00 0 00001   687         LGL 1               X                                                    
  01143   0020 00 2 00002   688         TRA 2,2             EXIT FROM ROW PROCEDURE                              
  01144   0361 00 2 00000   689   C3    ACL 0,2             ADD TO BCD RECORD                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0018
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0018
 
 
  01145   0602 00 1 00000   690   C2    SLW 0,1             STORE IN BCD RECORD                                  
@@ -791,7 +791,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01206   0774 00 4 00000   743   SPX   AXT     **,4               RESTORE LINK IR                               
  01207   0500 00 4 00001   744         CLA     1,4                GET PARAMETER                                 
  01210   0737 00 4 00000   745         PAC     0,4                COMPLEMENT INTO IR 4                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0019
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0019
 
 
  01211   0522 00 0 00351   746         XEC     $WRS                                                             
@@ -850,7 +850,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01265   0600 00 4 77714   799         STZ     COMMON+26,4     WORKING                                          
  01266   2 00001 4 01265   800         TIX     *-1,4,1         STORAGE                                          
  01267  -0500 00 0 00455   801   BC03  CAL     BC50          STROBE STARTER                                     
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0020
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0020
 
 
  01270   0634 00 1 01274   802   BC04  SXA     BC01,1        WORKING CELL FOR N                                 
@@ -909,7 +909,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                            855                                                                                  
  01371   0762 00 0 01321   856  PSHLDB RCDA                                                                     
  01372   0540 00 0 01375   857         RCHA *+3                                                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0021
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0021
 
 
  01373   0544 00 0 00000   858         LCHA 0                                                                   
@@ -968,7 +968,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01442   2 00001 1 01440   911         TIX     *-2,1,1            ..                                            
  01443  -0602 00 2 77665   912         ORS     COMMON+3,2         ..                                            
  01444  -0500 00 2 77667   913         CAL     COMMON+5,2         ..                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0022
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0022
 
 
  01445   0361 00 2 77665   914         ACL     COMMON+3,2         ..                                            
@@ -1027,7 +1027,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01526   0 00000 0 00364   967                 BCDOUT             ON BCD OUTPUT TAPE                            
  01527   0 00021 0 01533   968                 TR,,17                                                           
  01530  -0754 00 0 00000   969         PXD     0,0                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0023
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0023
 
 
  01531   0774 00 4 00000   970   TIR   AXT     **,4               RESTORE LINK IR                               
@@ -1086,7 +1086,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01621   1 77777 4 01622  1023         TXI     *+1,4,-1           PUSH UP BY -1                                 
  01622  -0634 00 4 01624  1024         SXD     BEX,4              SET UP ALL DONE TEST INSTRUCTION              
  01623  -0534 00 4 02317  1025         LXD     $CPPI,4            PICK UP CURRENT PDL COUNTER                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0024
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0024
 
 
  01624   3 00000 4 01644  1026   BEX   TXH     BACTD,4,**         GO IF ALL UNSAVED                             
@@ -1145,7 +1145,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  01712   0622 00 0 01717  1079         STD     FLXT                                                             
  01713   0500 00 0 00177  1080         CLA     FLAPCZ             NORMAL CONTENTS OF ZERO                       
  01714   0601 00 0 00000  1081         STO     0                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0025
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0025
 
 
  01715   0500 00 0 77662  1082         CLA     COMMON             RESTORE AC                            PAGE 027
@@ -1204,7 +1204,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02000  -0501 00 0 00452  1135         ORA     OBLANK             LEADING BLANK                                 
  02001   0602 00 0 02055  1136         SLW     STRM               STORE TRAP ADDRESS IN OCATL                   
  02002   0500 00 0 00177  1137         CLA     FLAPCZ             RESTORE ORIGNAL CONTENTS OF ZERO              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0026
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0026
 
 
  02003   0601 00 0 00000  1138         STO     0                                                                
@@ -1263,7 +1263,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           1191  *                                                                               
                           1192  *                                                                               
                           1193                                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0027
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0027
 
 
                           1194             ERROR1 USER BY APPLY HAS ONE ARGUMENT AND PRINTS IT USING            
@@ -1322,7 +1322,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02141   0402 00 0 02307  1247         SUB     LFULWS                                                           
  02142   0601 00 0 02302  1248         STO     $BFW                                                             
  02143   0402 00 0 02306  1249         SUB     LPBPDL                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0028
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0028
 
 
  02144   0402 00 0 02305  1250         SUB     LBINPG                                                           
@@ -1381,7 +1381,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02227   0400 00 0 00442  1303         ADD     $QD1                                                             
  02230   0601 00 4 00000  1304         STO     0,4                START MAKING FREE STORAGE                     
  02231   1 00001 4 02232  1305         TXI     *+1,4,1                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0029
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0029
 
 
  02232  -3 00000 4 02227  1306   SUPFS TXL     *-3,4,**           -BFS                                          
@@ -1440,7 +1440,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           1359  *      TSX     UNSAVE,4                                                         
                           1360  *      RETURN                                                                   
                           1361  *              THE SAVED ITEMS MUST BE IN A CONTIGOUS BLOCK WITH THE            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0030
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0030
 
 
                           1362  *              THE FIRST ITEM    PZE ATOMIC NAME OF SUBR,,IR 4                  
@@ -1499,7 +1499,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02365   0500 00 2 77770  1415   END7  CLA     -8,2                                                             
  02366   0601 00 1 77770  1416         STO     -8,1                                                             
  02367   0500 00 2 77771  1417   END6  CLA     -7,2                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0031
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0031
 
 
  02370   0601 00 1 77771  1418         STO     -7,1                                                             
@@ -1558,7 +1558,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02432   0500 00 2 00000  1471   CNSLP CLA     0,2                NEXT WORD ON ATOM                             
  02433   0734 00 2 00000  1472         PAX     0,2                CAR OF ATOM, SEARCH FOR FULL WORD             
  02434   3 06733 2 02436  1473         TXH     *+2,2,$SUBR        SUCH AS $SUBR                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0032
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0032
 
 
  02435   3 06732 2 02461  1474         TXH     CMKO,2,$SUBR-1                                                   
@@ -1617,7 +1617,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02516   0560 00 0 03313  1527         LDQ     CNAT               ATOM THAT WE ARE WORKING ON                   
  02517   0074 00 4 06417  1528         TSX     BUKSRT,4           PUT ON BUCKET SORTED OBJECT LIST              
  02520  -0534 00 2 03311  1529         LXD     CNX,2              POINTER TO NEXT WORD ON ATOM                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0033
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0033
 
 
  02521   0020 00 0 02443  1530         TRA     CNRT               GO BACK                                       
@@ -1676,7 +1676,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02572  -0734 00 2 00000  1583         PDX     0,2                                                              
  02573   0074 00 4 03066  1584         TSX     MRKLST,4           MARK THE DECREMENT                            
  02574   0774 00 2 00000  1585   TMLF  AXT     **,2               ADDRESS OF WORD TO IR                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0034
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0034
 
 
  02575   0074 00 4 03066  1586         TSX     MRKLST,4           MARK IT                                       
@@ -1735,7 +1735,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02661  -0501 00 0 03266  1639         ORA     BIT                PUT IN ZERO BIT                               
  02662  -0602 00 2 00000  1640   MBTTA ORS     **,2               TOP BIT TABLE, SET BITS                       
  02663  -2 00001 1 02700  1641         TNX     MRKF,1,1           GO IF DONE                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0035
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0035
 
 
  02664   1 77777 2 02665  1642         TXI     *+1,2,-1           DECREMENT BIT WORD BY ONE                     
@@ -1794,7 +1794,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  02743   0734 00 2 00000  1695         PAX     0,2                INTO IR 2                                     
  02744   1 00001 2 02745  1696         TXI     *+1,2,1            MAKE INDEXING EASY                            
  02745   0535 00 1 02733  1697         LAC     H,1                SET UP IR 1                                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0036
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0036
 
 
  02746   0441 00 4 00000  1698   SFWLD LDI     **,4               BOTTOM FREE STORAGE, (TBT + 1)                
@@ -1853,7 +1853,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03033   0074 00 4 01222  1751         TSX     OUTPUT,4           WRITE OUT MESSAGE                             
  03034   0 00000 0 00364  1752                 BCDOUT                                                           
  03035   0 00023 0 03174  1753                 RCTM,,19                                                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0037
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0037
 
 
  03036   0520 00 0 03225  1754         ZET     RCBE               SKIP IF GOOD EXIT                             
@@ -1912,7 +1912,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03117   0754 00 2 00000  1807         PXA     0,2                CALCULATE BIT TABLE WORD AND BIT              
  03120  -0765 00 0 00005  1808         LGR     5                                                                
  03121   0734 00 2 00000  1809         PAX     0,2                BIT TABLE WORD                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0038
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0038
 
 
  03122  -0754 00 0 00000  1810         PXD     0,0                                                              
@@ -1971,7 +1971,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03201   0 00000 0 00000  1863  RCT1                              THE CALL LOCATION IS PUT HERE                 
  03202   604623632143     1864         BCI     4, OCTAL.                                                        
  03206   606026644343     1865         BCI     2,  FULL WORDS                                           PAGE 042
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0039
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0039
 
 
  03210   0 00000 0 00000  1866   RCT4                             NUMBER FULL WORDS COLLECTED                   
@@ -2024,7 +2024,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03302   0 00000 0 74475  1913                 -*-1               END OF TEMLIS                                 
  03303   0 03707 0 03304  1914                 BEGBLK,,ENDBLK-1   FUNCTION STORAGE                              
                           1915  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0040
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0040
 
 
                           1916         EJECT                                                            PAGE 044
@@ -2083,7 +2083,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03347   0 00000 0 00000  1969  CWR1                                                                            
                           1970         HEAD    A                  APPLY                                 PAGE 045
  03350   0 00000 0 00000  1971   ASS1                                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0041
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0041
 
 
  03351   0 00000 0 00000  1972   ASSL                                                                           
@@ -2142,7 +2142,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03432   0 00000 0 00000  2025   MS3                         FUNCTIONAL ARGUMENT                                
  03433   0 00000 0 00000  2026   MS4                         FINAL ANSWER                                       
  03434   0 00000 0 00000  2027   MS5                         INTERMEDIATE ANSWER                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0042
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0042
 
 
                           2028         HEAD    R                  OR                                            
@@ -2201,7 +2201,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03506   0 00000 0 00000  2081   EVQAN                                                                          
  03507                    2082         BSS     100                EVALQUOTE BUFFER                              
  03653  -0 00000 0 00000  2083   EVQB  MZE                        TEST CELL FOR READ IN                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0043
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0043
 
 
                           2084         HEAD    F                                                                
@@ -2212,7 +2212,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03656   0 00000 0 00000  2089   MKT1                             TEMP STORAGE TYPE (FIX OR FLD)                
  03657                    2090         BSS     25                 ROOM FOR MORE STORAGE                         
  03710                    2091  ENDBLK BSS     0                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0044
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0044
 
 
                           2092         EJECT                                                                    
@@ -2271,7 +2271,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  03764   0500 00 0 04100  2145         CLA     CNTST              PICK UP  INITIAL COUNT                        
  03765   0560 00 0 00475  2146         LDQ     $FIXD              PICK UP $FIX                          PAGE 049
  03766  -0634 00 4 01562  2147         SXD     $ERROR,4           SAVE LINK IR                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0045
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0045
 
 
  03767   0774 00 4 00010  2148         AXT     8,4                8 SPARE CONSES FOR $MKNO                      
@@ -2330,7 +2330,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04040   0600 00 0 03220  2201         STZ     RCRLOC             SIGNAL NO RELOCATION NECESSARY                
  04041   0074 00 4 02522  2202         TSX     RECLAM,4           DO THE WORK                                   
  04042   0774 00 4 00000  2203   FRX   AXT     **,4               RESTORE LINK OR                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0046
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0046
 
 
  04043   0020 00 4 77776  2204         TRA     -2,4               NON-STANDARD EXIT                             
@@ -2389,7 +2389,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           2257  *      DECON AND NUMNAM                                                         
                           2258  *                                                                               
                           2259  *      DECON TAKES A DECIMAL NUMBER (+ OR -) AS INPUT IN THE AC AND             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0047
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0047
 
 
                           2260  *      GIVES AS OUTPUT THE BCD REPRESENTATION OF THAT NUMBER.  LO ORDER         
@@ -2448,7 +2448,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04156  -0602 00 0 77665  2313         ORS     DEDIG                                                            
                           2314                                                                                  
  04157   0760 00 0 00012  2315  DEV    DCT                                                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0048
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0048
 
 
  04160   0074 00 4 01676  2316         TSX     $DCT,4             MACHINE ERROR                                 
@@ -2507,7 +2507,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04214   0100 00 4 00001  2369  MAPLIS TZE     1,4           NULL(L) = NIL                                      
  04215  -0634 00 4 03430  2370         SXD     MS1,4         SAVE LINK IR                                       
  04216  -0534 00 4 02317  2371         LXD     $CPPI,4       GET PDL POINTER                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0049
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0049
 
 
  04217   1 77772 4 04220  2372         TXI     *+1,4,-6           SAVE TOTAL OF 6 ITEMS                         
@@ -2566,7 +2566,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04304  -0534 00 4 03430  2425         LXD     MS1,4         PICK UP LINK IR                                    
  04305   0020 00 4 00001  2426         TRA     1,4           RETURN                                             
                           2427  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0050
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0050
 
 
  04306  -0754 00 4 00000  2428   MPRG1 PXD     0,4           MAIN PROGRAM  PUT L IN AC                          
@@ -2625,7 +2625,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04363   0601 00 0 03360  2481         STO CS2                                                                  
  04364  -0320 00 0 00000  2482         ANA DECM              CDR(L)                                             
  04365   0074 00 4 04345  2483         TSX COPY,4            COPY(CDR(L))                                       
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0051
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0051
 
 
  04366   0534 00 4 03360  2484         LXA CS2,4             CAR(L)                                             
@@ -2684,7 +2684,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04444   0020 00 0 04404  2537         TRA     SR3                                                              
  04445   0074 00 4 02326  2538   SR4   TSX     UNSAVE,4                                                         
  04446  -0534 00 4 03322  2539         LXD $ARG4,4                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0052
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0052
 
 
  04447   3 00012 4 04452  2540         TXH     SRCMPT,4,10                                                      
@@ -2743,7 +2743,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04517  -0534 00 4 04600  2593         LXD     EQXR,4             RESTORE LINK IR                               
  04520   0020 00 4 00001  2594         TRA     1,4                                                              
                           2595  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0053
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0053
 
 
  04521  -0754 00 0 00000  2596   EQF   PXD     0,0                FALSE EXIT, CLEAR AC                          
@@ -2802,7 +2802,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04601   0 00000 0 00000  2649   EQL1                             LIST 1 STORAGE                                
  04602   0 00000 0 00000  2650   EQL2                             LIST 2 STORAGE                                
  04603   0 00000 0 00000  2651   EQTS                             TEST CELL  0 FIX, NON 0 FLO                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0054
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0054
 
 
                           2652  *                                                                               
@@ -2861,7 +2861,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04644   0074 00 4 04620  2705         TSX PRIN0,4                                                              
  04645  -0534 00 4 04675  2706   A4    LXD PS2,4                                                                
  04646  -3 00000 5 04656  2707         TXL     A6,5,0             EXIT IF NULL                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0055
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0055
 
 
  04647   0500 00 4 00000  2708         CLA     0,4                TEST FOR ATOM                                 
@@ -2920,7 +2920,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04705  -0734 00 4 00000  2761         PDX ,4                                                                   
  04706   0500 00 4 00000  2762         CLA ,4                                                                   
  04707   0625 00 0 05103  2763         STT     PTTGR                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0056
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0056
 
 
  04710  -0320 00 0 00457  2764         ANA ADDM                                                                 
@@ -2979,7 +2979,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  04771   0162 00 0 04776  2817         TQP     BETTY              TEST FOR NEGATIVE NUMBER                      
  04772   0500 00 0 05100  2818         CLA     MISGN              IF SO, PRINT -                                
  04773   0074 00 4 05110  2819         TSX     $PRIN2,4                                                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0057
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0057
 
 
  04774   0500 00 2 00000  2820         CLA     0,2                REMOVE MINUS SIGN                             
@@ -3038,7 +3038,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05053   0500 00 0 05077  2873   MARIE CLA     BCI0Q              PRINT Q0                                      
  05054   0074 00 4 05110  2874   PATSY TSX     $PRIN2,4                                                         
  05055   0020 00 0 04762  2875         TRA     PR4E                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0058
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0058
 
 
                           2876                                                                                  
@@ -3097,7 +3097,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05124  -0320 00 0 05260  2929   SHIFL ANA RCHM    IS THE RIGHT CHARACTER 77                                    
  05125   0402 00 0 05260  2930         SUB RCHM                                                                 
  05126  -0100 00 0 05133  2931         TNZ JUST                   NOT 77                                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0059
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0059
 
 
  05127  -0500 00 0 05262  2932         CAL TEMP                                                                 
@@ -3156,7 +3156,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05214  -0634 00 2 05254  2985  TERPRI SXD PR8,2                                                                
  05215  -0634 00 4 05255  2986         SXD PR9,4                                                                
  05216  -0534 00 2 05257  2987         LXD PARTS,2                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0060
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0060
 
 
  05217  -0534 00 4 05256  2988         LXD WORDS,4                                                              
@@ -3215,7 +3215,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05315   0 30000 0 05312  3041         PZE     ADT,,3*4096        3                                             
  05316   0 40000 0 05312  3042         PZE     ADT,,4*4096        4                                             
  05317   0 50000 0 05312  3043         PZE     ADT,,5*4096        5                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0061
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0061
 
 
  05320   0 60000 0 05312  3044         PZE     ADT,,6*4096        6                                             
@@ -3274,7 +3274,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05375  -0600 00 0 05460  3097         STQ     PNCQ               SAVE CONTENTS OF MQ                           
  05376   0560 00 0 00370  3098         LDQ     $ZERO              ZERO MQ                                       
  05377  -0765 00 0 00006  3099         LGR     6                  SHIFT LOW ORDER DIGITS                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0062
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0062
 
 
  05400   0361 00 0 05456  3100         ACL     PLIS               ADD BCD NAME OF CARD                          
@@ -3333,7 +3333,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05460   0 00000 0 00000  3153   PNCQ                                                                           
  05461   0 00000 0 00000  3154  PUNACT                            NON-ZERO IF PUNCH ROUTINE ACTIVE              
  05462                    3155         BSS     12                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0063
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0063
 
 
  05476  +000000000000     3156   POUP  OCT     0,0                OUTPUT BUFFER                                 
@@ -3392,7 +3392,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05557   0100 00 0 05564  3209         TZE     FL77                                                             
  05560   0221 00 0 05716  3210         DVP     A1-1               10.                                           
  05561   0500 00 0 77664  3211         CLA     COMMON+2                                                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0064
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0064
 
 
  05562   0400 00 0 05717  3212         ADD     A1                 1.                                            
@@ -3451,7 +3451,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05647   0162 00 0 05651  3265         TQP     FL70               FOR PLUS.                                     
  05650  -0500 00 0 00423  3266         CAL     ONEMI              NEGATIVE.                                     
  05651   0074 00 4 05673  3267   FL70  TSX     INBCD,4            INSERT BLANK OR MINUS.                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0065
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0065
 
 
  05652  -0754 00 2 00000  3268         PXD     0,2                                                              
@@ -3510,7 +3510,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    00423  3321   ONEMI SYN     $QO40                                                            
                    00427  3322   ONEBL SYN     $QO60                                                            
                    00471  3323   ONES  SYN     SEVENS                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0066
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0066
 
 
                           3324  *                                                                               
@@ -3569,7 +3569,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  05774   0601 00 0 03452  3377         STO     RS2                SAVE RESULTS                                  
  05775   0074 00 4 05757  3378         TSX     READ1,4            GET NEXT ITEM                                 
  05776   0131 00 0 00000  3379         XCA                        PUT IN MQ                                     
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0067
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0067
 
 
  05777   0500 00 0 03452  3380         CLA     RS2                FIRST ITEM                                    
@@ -3628,7 +3628,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06047   0020 00 0 06041  3433         TRA     RDGC               ,                                             
  06050   0020 00 0 06062  3434         TRA     RDPU               (                                             
  06051   0020 00 0 06062  3435         TRA     RDPU               )                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0068
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0068
 
 
  06052   0020 00 0 06062  3436         TRA     RDPU               .                                             
@@ -3687,7 +3687,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06134   0020 00 0 06140  3489         TRA     RDPS               (                                             
  06135   0020 00 0 06140  3490         TRA     RDPS               )                                             
  06136   0020 00 0 06164  3491         TRA     RDPD               .                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0069
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0069
 
 
  06137   0020 00 0 06053  3492   RDJT2 TRA     RDJT1              ILLEGAL CHARACTER                             
@@ -3746,7 +3746,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06220   0774 00 4 00000  3545   GTX   AXT     **,4               RESTORE LINK IR                               
  06221   0020 00 4 00001  3546         TRA     1,4                                                              
                           3547  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0070
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0070
 
 
  06222   0774 00 2 00006  3548   GTPC  AXT     6,2                RELOAD PART COUNT                             
@@ -3805,7 +3805,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06302   2 00001 4 06301  3601         TIX     *-1,4,1                                                          
  06303   0500 00 0 06335  3602         CLA     PUTVL              RELINK THE WORDS                              
  06304   0774 00 4 00005  3603         AXT     5,4                                                      PAGE 076
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0071
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0071
 
 
  06305   0402 00 0 00442  3604         SUB     $QD1               SET POINTERS                                  
@@ -3864,7 +3864,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06420   0601 00 0 06533  3657  INTRN1 STO     $VALUE             EXTERNAL ENTRANCE FROM APPLY                  
  06421   0634 00 4 06525  3658  INTERN SXA     ITRX,4             ENTRANCE FROM READ                            
  06422   0634 00 2 06526  3659         SXA     ITRY,2             SAVE IR 2                                     
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0072
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0072
 
 
  06423  -0534 00 4 06533  3660         LXD     $VALUE,4           PICK UP POINTER TO PNAME LIST                 
@@ -3923,7 +3923,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06510   0131 00 0 00000  3713         XCA                                                                      
  06511   0500 00 0 00504  3714         CLA OPNA                                                                 
  06512   0074 00 4 03730  3715         TSX $CONS,4                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0073
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0073
 
 
  06513   0131 00 0 00000  3716         XCA                        INTO MQ                                       
@@ -3982,7 +3982,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06574  -0760 00 0 00001  3769         PBT                        TEST FOR OCTAL NUMBER                         
  06575   0020 00 0 06601  3770         TRA     NA3                TRA IF OCTAL                                  
  06576   0500 00 0 00503  3771         CLA     $OCTD              OCTAL SIGNAL FOR $MKNO                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0074
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0074
 
 
  06577   0131 00 0 00000  3772         XCA                                                                      
@@ -4041,7 +4041,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06645   2 00001 1 06641  3825   CY2   TIX CY3,1,1        GET NEXT CHARACTER                                    
  06646   1 77777 2 06647  3826         TXI *+1,2,-1                                                             
  06647   0560 00 2 00000  3827         LDQ 0,2                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0075
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0075
 
 
  06650   1 00005 1 06641  3828         TXI CY3,1,5                                                              
@@ -4100,7 +4100,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  06734   0630 00 0 07106  3881         STP CM6                                                                  
  06735  -0500 00 0 06672  3882         CAL BN2            SET UP B CONVERSION                                   
  06736  -3 00000 0 06720  3883         TXL BN3                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0076
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0076
 
 
  06737   0500 00 0 00455  3884   MN1   CLA PBIT           START NEGATIVE ACCUMULATION WITH NEG. ZERO            
@@ -4159,7 +4159,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07023   0400 00 0 77662  3937         ADD BN                                                                   
  07024   0621 00 0 07026  3938         STA CX5                                                                  
  07025   0500 00 0 77666  3939         CLA N                                                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0077
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0077
 
 
  07026   0767 00 0 00000  3940   CX5   ALS **                                                                   
@@ -4218,7 +4218,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07112   0771 00 0 00035  3993         ARS 29             NECESSARY TO POSITION                                 
  07113   0400 00 0 00000  3994         ADD Q128           NUMBER AS INDICATED                                   
  07114   0400 00 0 77662  3995         ADD BN             BY B                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0078
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0078
 
 
  07115   0120 00 0 07117  3996         TPL SHIFT                                                                
@@ -4277,7 +4277,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07172   0560 00 0 77662  4049         LDQ MQ             RESTORE FIRST GROUP OF CHARACTERS                     
  07173  -0754 00 0 00000  4050         PXD     ,0                                                               
  07174   0621 00 0 06751  4051         STA CV7            SET SIGNAL FOR OCTAL NUMBER                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0079
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0079
 
 
  07175   1 00010 1 07203  4052         TXI OCT9,1,8       FIX CHARACTER COUNT                                   
@@ -4336,7 +4336,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07242  +000000053254     4105   EXC2  DEC 22188          CHAR.=COMPL. 35                                       
  07243  +000000036344     4106   FL1   DEC 15588                                                                
  07244  +000000041300     4107   FL2   DEC 17088                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0080
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0080
 
 
  07245  +141500000000     4108         OCT 141500000000,144620000000,147764000000,153470400000                  
@@ -4395,7 +4395,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07364   0074 00 4 02326  4161         TSX UNSAVE,4                                                             
  07365  -0534 00 4 03361  4162         LXD CR1,4                                                                
  07366   0020 00 0 03730  4163         TRA $CONS                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0081
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0081
 
 
                           4164                                                                                  
@@ -4454,7 +4454,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07442   0020 00 4 00001  4217         TRA      1,4                                                             
  07443   0500 00 0 03475  4218   SUB4  CLA      SX                                                              
  07444   0020 00 0 07441  4219         TRA      SUB2                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0082
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0082
 
 
                           4220         HEAD B                                                                   
@@ -4513,7 +4513,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07526   0734 00 4 00000  4273         PAX ,4                                                                   
  07527  -0634 00 4 07540  4274         SXD N2,4                                                                 
  07530   0560 00 0 07540  4275         LDQ N2                     CAAR(J) IN MQ                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0083
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0083
 
 
  07531   0500 00 0 03472  4276         CLA E                                                                    
@@ -4572,7 +4572,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07603   0131 00 0 00000  4329         XCA                        INTO MQ                                       
  07604  -0534 00 4 03440  4330         LXD     TEM,4              LIST 1                                        
  07605   0500 00 4 00000  4331         CLA     0,4                TAKE CAR OF LIST                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0084
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0084
 
 
  07606   0734 00 4 00000  4332         PAX     0,4                                                              
@@ -4631,7 +4631,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07655   0074 00 4 03425  4385         TSX MCN4,4                                                               
  07656   0020 00 0 07662  4386         TRA *+4                                                                  
  07657  -0634 00 4 07661  4387         SXD *+2,4                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0085
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0085
 
 
  07660   0074 00 4 12007  4388         TSX COMPAT,4                                                             
@@ -4690,7 +4690,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  07730   0734 00 4 00000  4441         PAX 0,4                                                                  
  07731  -3 00000 4 07733  4442   RMPRT TXL *+2,4,**                                                             
  07732  -3 00000 4 07737  4443         TXL RMPRE,4,**                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0086
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0086
 
 
  07733  -0734 00 4 00000  4444         PDX 0,4                                                                  
@@ -4749,7 +4749,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10003   603021626022     4497         BCD 5 HAS BEEN ENTERED, ARGUMENTS..                                      
  10010                    4498   PAL4  BSS 0                                                                    
  10010   606060606060     4499   PAL5  BCD 1                                                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0087
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0087
 
 
                           4500         EJECT                                                            PAGE 094
@@ -4808,7 +4808,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10053   0500 00 4 00000  4553         CLA 0,4                    CWR(A)                                        
  10054  -0734 00 4 00000  4554         PDX ,4                     CDR(A)                                PAGE 095
  10055   0734 00 2 00000  4555         PAX ,2                     CAR(A)                                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0088
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0088
 
 
  10056   0500 00 2 00000  4556         CLA ,2                                                                   
@@ -4867,7 +4867,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           4609             ATTRIB(O,L)=/ CDR(O)=0 YIELDS (L REPLACES CDR(O))                    
                           4610                          ELSE ATTRIB(CDR(O),L)  /                                
                           4611                                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0089
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0089
 
 
                           4612         HEAD R                                                                   
@@ -4926,7 +4926,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10200  -0501 00 0 10216  4665         ORA     LETTR                                                            
  10201   0074 00 4 03710  4666         TSX $CONSW,4                                                             
  10202   0560 00 0 00370  4667         LDQ GENZ                                                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0090
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0090
 
 
  10203   0074 00 4 03730  4668         TSX $CONS,4                                                              
@@ -4985,7 +4985,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10234   0020 00 0 10260  4721         TRA     OVEOF              END OF FILE RETURN                            
  10235   0560 00 0 10406  4722   OVGOR LDQ     OVBUF+2            PICK UP OVERLORD DIRECTION                    
  10236  -0500 00 0 10405  4723         CAL     OVBUF+1                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0091
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0091
 
 
  10237  -0763 00 0 00006  4724         LGL     6                  SHIFT DIRECTION IN LOGICAL AC                 
@@ -5044,7 +5044,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10316   263145606060     4777         BCI     1,FIN                                                            
  10317   0020 00 0 10472  4778         TRA     OVDN                                                             
  10320   623171256060     4779         BCI     1,SIZE                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0092
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0092
 
 
  10321   0020 00 0 10532  4780         TRA     OVSZE                                                            
@@ -5103,7 +5103,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10445   0074 00 4 00651  4833         TSX     OVLT,4             GET ONE                                       
  10446   0055 00  000002  4834         SIR     2                  SET WRITE INDICATOR                           
  10447   0057 00  000001  4835         RIR     1                  RESET READ INDICATOR                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0093
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0093
 
 
  10450   0020 00 0 10434  4836         TRA     OVTA               PERFORM EVALQ AND GET NEXT CARD               
@@ -5162,7 +5162,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           4889  *      ONE     OVERLORD DIRECTION                                               
                           4890  *                                                                               
  10526   0056 00  000020  4891   OVONE RNT     20                 TEST FOR SIZE                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0094
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0094
 
 
  10527   0020 00 0 10570  4892         TRA     OVNSZ              ERROR, NO SIZE CARD READ                      
@@ -5221,7 +5221,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10575   0634 00 2 10727  4945         SXA     OVDY,2                                                           
  10576   0634 00 1 10730  4946         SXA     OVDZ,1                                                           
  10577   0600 00 0 11040  4947         STZ     OVDEX              INDICATE OVERLORD ENTRANCE                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0095
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0095
 
 
  10600   0601 00 0 10723  4948         STO     OVDC               SAVE AC                                       
@@ -5280,7 +5280,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10664   0 00000 0 00364  5001                 BCDOUT             ON BCDOUT                                     
  10665   0 00024 0 11050  5002                 OUP,,20                                                          
  10666   0600 00 0 11037  5003   OVDSH STZ     OVDZS              SET SWITCH TO TEST FOR LINE OF ZEROS          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0096
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0096
 
 
  10667  -0500 00 0 00472  5004         CAL     BLANKS             BLANK THE FLAG FIELD                          
@@ -5339,7 +5339,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  10747   0601 00 0 11042  5057         STO     OBEG               STORE IN BEGINNING                            
  10750   0131 00 0 00000  5058         XCA                        ARG 2                                         
  10751  -0734 00 2 00000  5059         PDX     0,2                ARG TO INDEX 2                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0097
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0097
 
 
  10752   0074 00 4 13075  5060         TSX     FIXVAL,4           EVALUATE AS FIXED POINT NUMBER                
@@ -5398,7 +5398,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    00651  5113   OVLT  SYN     OVLTXX                                                           
  11036   605454545460     5114   OVDSF BCI     1, ****            STAR FLAG AFTER DUMPING ZEROS                 
  11037   0 00000 0 00000  5115   OVDZS                            SUPPRESSES OUTPUT WHEN DUMPING ZEROS  PAGE 106
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0098
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0098
 
 
  11040   0 00000 0 00000  5116   OVDEX                            ZERO FOR OVERLORD EXIT NON-ZERO , LISP        
@@ -5457,7 +5457,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11151   0774 00 2 00002  5169         AXT     2,2                TRY B                                         
  11152   0056 00  000002  5170         RNT     2                  SKIP IF B OR C                                
  11153   0774 00 2 00001  5171         AXT     1,2                IF NO SKIP, MUST BE A                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0099
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0099
 
 
  11154  -0763 00 0 00006  5172         LGL     6                  TAPE NUMBER IN AC                             
@@ -5516,7 +5516,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11247   0 00000 0 00020  5225         PZE     16                 HI DENS, BIN TMP                              
  11250   0 00003 0 03200  5226   OVTCT PZE     3*512+2*64,,3      CHANNEL C                                     
  11251   0 00002 0 02200  5227         PZE     2*512+2*64,,2      B                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0100
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0100
 
 
  11252   0 00001 0 01200  5228         PZE     1*512+2*64,,1      A                                             
@@ -5575,7 +5575,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11330   0020 00 0 11334  5281         TRA     EVQA               IS SECOND LIST                                
  11331  -0625 00 0 03653  5282         STL     EVQB               FLIP SWITCH                                   
  11332   0601 00 2 03653  5283         STO     EVQB,2             SAVE FIRST LIST OF DOUBLET IN BUFFER          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0101
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0101
 
 
  11333   0020 00 0 11321  5284         TRA     EVQRD              GET NEXT LIST                                 
@@ -5634,7 +5634,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           5337  *                                                                               
                           5338  *      EVALQT  LISP ENTRANCE TO EVALQUOTE                                       
                           5339  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0102
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0102
 
 
  11421   0634 00 4 11376  5340  EVALQT SXA     EVQD,4             SET RETURN INDEX CELL                         
@@ -5693,7 +5693,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11500   0020 00 0 11375  5393         TRA     EVQZ               GO TO APPLY FOR FEXPR                         
                           5394  *                                                                               
  11501  -0734 00 4 00000  5395   EVQFS PDX     0,4                FOUND FSUBR, GET TXL INSTRUCTION              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0103
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0103
 
 
  11502   0500 00 4 00000  5396         CLA     0,4                                                              
@@ -5752,7 +5752,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11603   0601 00 0 11667  5449         STO     HORN+5             SAVE (LIMIT - OLD COUNT)                      
  11604   0500 00 0 11670  5450         CLA     HORN+6             SET CONS COUNTER TO LIMIT                     
  11605   0621 00 0 03742  5451         STA     $CNTR1                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0104
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0104
 
 
  11606  -0320 00 0 00465  5452         ANA     PDTMSK                                                           
@@ -5811,7 +5811,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11664  -0 00000 0 11664  5505  ERNULL MZE     *                  (+2) ZERO MEANS SKIP DIAGNOSTICS              
  11665  -3 00000 0 11423  5506  EREXIT TXL     EVQERR             (+3) EXIT INSTRUCTION FOR $ERROR              
  11666  -0 00000 0 00000  5507         MZE                        (+4) INDICATORS                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0105
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0105
 
 
  11667  -0 00000 0 00000  5508         MZE                        (+5) CONS COUNTER INCREMENT                   
@@ -5870,7 +5870,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  11740   0500 00 4 00000  5561   D     CLA     0,4                                                              
  11741  -0320 00 0 00460  5562         ANA     $DMASK                                                           
  11742   0774 00 4 00000  5563   CDX   AXT     **,4                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0106
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0106
 
 
  11743   0020 00 4 00001  5564         TRA     1,4                                                              
@@ -5929,7 +5929,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  12016   0737 00 2 00000  5617         PAC     0,2                COMPLEMENT NUMBER OF ARGUMENTS                
  12017  -3 00000 2 12024  5618   CL    TXL     CD,2,0             GO WHEN ALL DONE                              
  12020   0500 00 2 03316  5619         CLA     $ARG1-1,2          PICK UP ARGUMENT                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0107
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0107
 
 
  12021   0074 00 4 03730  5620         TSX     $CONS,4            CONS ON TO ARGUMENT LIST                      
@@ -5988,7 +5988,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           5668  *      NUMOB                                                                    
                           5669  *                                                                               
                           5670  *      NUMOB MAKES A NUMERICAL OBJECT CORRESPONDING TO THE BCD                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0108
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0108
 
 
                           5671  *      CHARACTERS IN THE BUFFER BOFFO.                                          
@@ -6047,7 +6047,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
 
 
                           5721         SPACE   5                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0109
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0109
 
 
                           5722  *      MKNAM AND CLEARBUFF                                                      
@@ -6106,7 +6106,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           5770  *                                                                               
                           5771  *      ADVANCE SETS CURCHAR TO THE NEXT CHARACTER                               
                           5772  *      STARTREAD READS A NEW RECORD                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0110
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0110
 
 
                           5773  *      ENDREAD MOVES TO THE END OF THE CURRENT RECORD AND                       
@@ -6165,7 +6165,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  12273  -0634 00 4 12220  5826  ENDRED SXD PORK,4                 SAVE IR4 FOR EXIT (ENDREAD ENTRANCE)          
  12274  -0634 00 0 12236  5827         SXD CHPOS,0                SET CHARACTER POSITION AND WORD               
  12275  -0634 00 0 12237  5828         SXD WDNUM,0                NUMBER AT END OF RECORD                       
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0111
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0111
 
 
  12276  -0520 00 0 12517  5829  STEW   NZT ERSIG                  TEST IF ERROR PRINTOUT NEEDED                 
@@ -6224,7 +6224,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
 
 
 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0112
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0112
 
 
 
@@ -6283,7 +6283,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  12415   0774 00 2 00000  5929   UPI2  AXT     **,2                                                             
  12416   0020 00 4 00001  5930         TRA     1,4                EXIT                                          
                           5931  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0113
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0113
 
 
                           5932  *      THIS ROUTINE USES $CONS                                                  
@@ -6342,7 +6342,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  12634   0 00000 0 00000  5980  CURC   PZE                        POINTER APPEARS IN DECREMENT                  
  12635   0 00000 0 00000  5981   CHACT PZE                        CHARACTER COUNT                               
                           5982  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0114
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0114
 
 
                           5983  *   MKNO   A FUNCTION OF TWO ARGUMENTS, THE FIRST IS A NUMBER, THE SECO         
@@ -6401,7 +6401,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  12707  -0600 00 0 12757  6036         STQ     T1+1                                                             
  12710   0560 00 0 12750  6037         LDQ     ANS                INSTRUCTION FOR INNER LOOP                    
  12711   0020 00 0 12725  6038         TRA     LOG2                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0115
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0115
 
 
                           6039  *                                                                               
@@ -6460,7 +6460,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           6087  *      IF N IS -, X IS SHIFTED RIGHT -N PLACES.                                 
                           6088  *      BOTH INPUTS MUST BE NUMERICAL OBJECTS.                                   
                           6089  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0116
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0116
 
 
  12760   0634 00 4 13003  6090  LSHIFT SXA     LSH1,4             SAVE IR4                                      
@@ -6519,7 +6519,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13025   0500 00 0 03322  6143         CLA     $ARG4                                                            
  13026   0601 00 0 13073  6144         STO     AGAT               DIMENSION 2                                   
  13027   0500 00 0 03323  6145         CLA     $ARG5                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0117
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0117
 
 
  13030   0601 00 0 13074  6146         STO     AGATH              DIMENSION 3                                   
@@ -6578,7 +6578,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13104   0500 00 2 00000  6199         CLA     0,2                PICK UP VALUE                                 
  13105   0020 00 4 00001  6200         TRA     1,4                NORMAL EXIT                                   
  13106   0774 00 2 00000  6201   FXVE  AXT     **,2               IR2 SHOULD LAND IN DECR. OF AC                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0118
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0118
 
 
  13107  -0634 00 4 01562  6202         SXD     $ERROR,4                                                         
@@ -6637,7 +6637,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13147   0500 00 4 00000  6255         CLA     0,4                NEXT WORD                                     
  13150   0622 00 0 03505  6256         STD     ATMP               SAVE POINTER                                  
  13151   0734 00 2 00000  6257         PAX     0,2                DIMENSION 2                                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0119
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0119
 
 
  13152   0074 00 4 13075  6258         TSX     FIXVAL,4           GET NUMBER VALUE                              
@@ -6696,7 +6696,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13237   0774 00 2 00005  6311         AXT     5,2                LENGTH OF PREFIX TO ARRAY                     
  13240   0500 00 2 13335  6312   ACLA  CLA     ADOT,2             PICK UP PREFIX                                
  13241   0601 00 4 00000  6313         STO     0,4                AND STORE IN CORE                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0120
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0120
 
 
  13242   1 77777 4 13243  6314         TXI     *+1,4,-1           UPDTAEC CORE LOCATION                         
@@ -6755,7 +6755,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13324   0534 00 2 13321  6367         LXA     AFRY,2             RESTORE INDEX 2                               
  13325   0500 00 0 03504  6368         CLA     AFAT               ARRAY NAME                                    
  13326   0074 00 4 01563  6369         TSX     $ERROR+1,4         GO TO ERROR                                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0121
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0121
 
 
  13327   543160600154     6370         BCI     1,*I  1*           NOT ENOUGH ROOM FOR ARRAY                     
@@ -6814,7 +6814,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13403   0560 00 0 00476  6423         LDQ     UNFLT              $FLOAT FOR TYPE                               
  13404  -0600 00 0 03321  6424         STQ     $ARG3                                                            
  13405   0560 00 0 13416  6425         LDQ     UNUT               SECOND NUMBER                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0122
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0122
 
 
  13406   0774 00 2 00000  6426   UNUX2 AXT     **,2               RESTORE IR 2                                  
@@ -6873,7 +6873,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13453   0020 00 0 13504  6479         TRA     DIVEX              NO, RESTORE AND EXIT                          
  13454   0560 00 0 00370  6480         LDQ     $ZERO              NIL IN MQ                                     
  13455   0074 00 4 03730  6481         TSX     $CONS,4            LIST OF REMAINDER                     PAGE 133
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0123
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0123
 
 
  13456   0131 00 0 00000  6482         XCA                        SHUTTLE INTO MQ                               
@@ -6932,7 +6932,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           6535  * THIS ROUTINE USES UNUMIX,FIXFLO,$ARG3 AND $MKNO                       PAGE 134
                           6536  *                                                                               
                           6537  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0124
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0124
 
 
                           6538  * EXPT TAKES 2 FIXED OR FLOATING POINT NUMBERS AS ARGUMENTS AND RAISES          
@@ -6991,7 +6991,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13610  -0100 00 0 13606  6591   P03   TNZ P01                                                                  
  13611  -0754 00 1 00000  6592         PXD 0,1                                                                  
  13612   0771 00 0 00022  6593         ARS 18                                                                   
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0125
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0125
 
 
  13613   0760 00 0 00003  6594         SSP                                                                      
@@ -7050,7 +7050,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13700   0260 00 0 13725  6647         FMP W                                                                    
  13701   0601 00 0 13725  6648         STO W                                                                    
  13702   0560 00 0 13725  6649         LDQ W                                                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0126
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0126
 
 
  13703   0260 00 0 13725  6650         FMP W                                                                    
@@ -7109,7 +7109,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  13765   0601 00 0 13644  6703         STO P18                                                                  
  13766   0534 00 1 00000  6704         LXA ZERO,1                                                               
  13767   0500 00 1 13737  6705   P23   CLA CP7,1                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0127
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0127
 
 
  13770   0601 00 1 13733  6706         STO C7,1                                                                 
@@ -7168,7 +7168,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14055  -0534 00 1 77662  6759         LXD COMMON,1                                                             
  14056  -0534 00 2 77663  6760         LXD COMMON+1,2                                                           
  14057   0020 00 4 00001  6761         TRA 1,4                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0128
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0128
 
 
  14060   0760 00 0 00000  6762   P29   CLM                                                                      
@@ -7227,7 +7227,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           6815  *                                                                               
  14142  -0634 00 4 03500  6816   MIN   SXD     AMIR,4             SAVE LINK IR                                  
  14143   0774 00 4 07604  6817         AXT     $MINP,4                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0129
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0129
 
 
  14144   0604 00 0 03501  6818         STI     AMIND              SAVE INDICATORS                               
@@ -7286,7 +7286,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14230   0055 00  000100  6871         SIR     100                SET INDICATOR SO IT WILL NOT GET BACK         
  14231   0500 00 0 03502  6872         CLA     AMLIS              PICK UP REST OF ARG LIST                      
  14232   0020 00 0 14164  6873         TRA     AMLP               DO NEXT ITEM                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0130
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0130
 
 
  14233   0055 00  000040  6874   AFLL  SIR     40                 IS FLOATING POINT, SET PROPER INDICATO        
@@ -7345,7 +7345,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14320   0074 00 4 14270  6927         TSX     MIXFL,4            UNMIX THE EXPRESSION                          
  14321   0020 00 0 14307  6928         TRA     AMRNT              COMPARE AND DO NEXT ITEM                      
  14322   0340 00 0 14341  6929   AMIN  CAS     AMSUM              MIN FUNCTION, COMPARE WITH CURRENT VAL        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0131
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0131
 
 
  14323   0020 00 0 14326  6930         TRA     *+3                IS GREATER                                    
@@ -7404,7 +7404,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14375   0 10120 0 00000  6983                 0,,$FLOAT                                                        
  14376   0 00000 0 00000  6984                 0,,0                                                             
  14377   0 00000 0 00000  6985                 0,,0                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0132
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0132
 
 
  14400   0 10135 0 00000  6986                 0,,$FIX                                                          
@@ -7463,7 +7463,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14444   0020 00 0 14433  7039         TRA     GRTRTP             DO GREATER THAN PREDICATE                     
                           7040  *                                                                               
                           7041  * THE FOLLOWING IS A NUMBER PREDICATE PACKAGE WHICH INCLUDES NUMBER             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0133
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0133
 
 
                           7042  *      PREDICATE, ZERO PREDICATE, MINUS PREDICATE, ONE PREDICATE, FIX           
@@ -7522,7 +7522,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14512  -0734 00 4 00000  7095         PDX     0,4                GET POINTER TO IR 4                           
  14513   0500 00 4 00000  7096         CLA     0,4                FULL WORD                                     
  14514   0760 00 0 00003  7097  ZPG    SSP                        GET MAGNITUDE OF N                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0134
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0134
 
 
  14515   0100 00 0 14527  7098         TZE     ZPT                EXIT TRUE IF ZERO                             
@@ -7581,7 +7581,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14571  -0501 00 0 00433  7151         ORA     UFMC               OR IN CHARACTERISTIC                          
  14572  -0600 00 0 14620  7152         STQ     UFQ                SAVE MQ                                       
  14573   0300 00 0 00433  7153         FAD     UFMC               ESSENTIALLY FAD OR ZERO TO NORMALIZE          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0135
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0135
 
 
  14574   0560 00 0 14620  7154         LDQ     UFQ                RESTORE MQ                                    
@@ -7640,7 +7640,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14644   0761 00 0 00000  7207         NOP                        IMPOSSIBLE RETURN                             
  14645   0500 00 0 00454  7208         CLA     $QF1               IS FLOAT, PICK UP FLOATING POINT 1            
  14646   0020 00 0 14657  7209         TRA     RCPFX              IS FIXED POINT                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0136
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0136
 
 
  14647   0241 00 0 14662  7210         FDP     RCPT               DIVIDE BY ARGUMENT                            
@@ -7659,7 +7659,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14662   0 00000 0 00000  7223   RCPT                             TEMPORARY STORAGE                             
                    00476  7224   RCPS  SYN     FLOATD             FLOAT INDICATOR                               
                           7225  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0137
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0137
 
 
                           7226         EJECT                                                            PAGE 147
@@ -7718,7 +7718,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  14732   0500 00 4 00000  7279         CLA 0,4                   CWDR(F)                                        
  14733   0601 00 0 03356  7280         STO AST4                                                         PAGE 148
  14734   0734 00 4 00000  7281         PAX 0,4                    CADR(F)                                       
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0138
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0138
 
 
  14735  -0754 00 4 00000  7282         PXD 0,4                                                                  
@@ -7777,7 +7777,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           7335                                                                                  
                    00501  7336   ASLBL SYN LABELD                                                               
                    00502  7337   ASLMD SYN LAMDAD                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0139
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0139
 
 
                    00500  7338   ASFUN SYN     FNARGD                                                           
@@ -7836,7 +7836,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15066   0074 00 4 02326  7391         TSX     UNSAVE,4                                                         
  15067  -0534 00 4 03315  7392         LXD     CSV,4                                                            
  15070   0020 00 4 00001  7393         TRA     1,4                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0140
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0140
 
 
                           7394  *                                                                               
@@ -7895,7 +7895,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15150  -3 00000 0 15115  7447   FAS   TXL     R33,,0             NOT FOUND ON PAIR LIST SO CALL ERROR          
  15151   0 00000 0 00000  7448   F                                ATOMIC FUNCTION GOES HERE                     
  15152   0 00000 0 00000  7449   AL                               ARGUMENT LIST                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0141
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0141
 
 
  15153   0 00000 0 00000  7450   A                                A OR PAIR LIST                                
@@ -7954,7 +7954,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15225  -0320 00 0 00000  7503         ANA BFDM                                                                 
  15226   0774 00 4 00000  7504  CDRX   AXT     **,4                                                             
  15227   0020 00 4 00001  7505         TRA 1,4                                                                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0142
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0142
 
 
                    00000  7506   BFDM  SYN     $DMASK                                                           
@@ -8013,7 +8013,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15276   0131 00 0 00000  7559         XCA                                                                      
  15277   0534 00 4 03415  7560         LXA BFS2,4                 CAR(L)                                        
  15300   0131 00 0 00000  7561         XCA                                                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0143
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0143
 
 
  15301  -0754 00 4 00000  7562         PXD ,4                                                                   
@@ -8072,7 +8072,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15354   0074 00 4 10042  7615         TSX SASSOC,4                                                             
  15355  -0734 00 4 00000  7616         PDX ,4                                                                   
  15356   0500 00 0 03415  7617         CLA BFS2                                                                 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0144
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0144
 
 
  15357   0622 00 4 00000  7618         STD 0,4                                                                  
@@ -8131,7 +8131,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15440   0020 00 4 00001  7671         TRA 1,4                                                                  
  15441  -0534 00 4 03436  7672   EVR3  LXD EVR2,4                                                               
  15442   3 00000 4 15425  7673         TXH EVR4,4,0                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0145
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0145
 
 
  15443   0500 00 0 00370  7674         CLA EVCF                                                                 
@@ -8190,7 +8190,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15516  -3 10141 4 15501  7727         TXL EVP2,4,$FEXPR-1        /= FEXPR                                      
  15517   0622 00 0 03412  7728         STD EVD2                   CDR(J)                                        
  15520  -0600 00 0 03321  7729         STQ $ARG3                  A                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0146
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0146
 
 
  15521   0500 00 0 03321  7730         CLA $ARG3                                                                
@@ -8249,7 +8249,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15577   0734 00 2 00000  7783         PAX ,2                     CAAR(J)                                       
  15600   3 00000 2 15572  7784   EVI1  TXH EVL1,2,**              CAAR(J) = E                                   
  15601  -3 00000 2 15572  7785   EVI2  TXL EVL1,2,**                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0147
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0147
 
 
  15602  -0734 00 4 00000  7786         PDX ,4                     CDAR(J)                                       
@@ -8308,7 +8308,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15661  -0534 00 2 16124  7839         LXD     EVT1,2                                                           
  15662   0622 00 0 16122  7840         STD     EVTAE              SAVE FUNCTION                                 
  15663  -0534 00 4 02317  7841  EV27   LXD     $CPPI,4                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0148
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0148
 
 
  15664   1 77773 4 15665  7842         TXI     *+1,4,-5           SAVE TOTAL OF 4 ITEMS                         
@@ -8367,7 +8367,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  15744   0074 00 4 02312  7895         TSX     $SAVE,4                                                          
  15745  -3 03320 0 02377  7896         TXL     $END2,,$ALIST+2                                                  
  15746   0500 00 0 03321  7897         CLA     $ARG3                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0149
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0149
 
 
  15747   0601 00 0 03316  7898         STO     $ALIST             POST CURRENT ALIST                            
@@ -8426,7 +8426,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16025   0534 00 4 03315  7951         LXA     CSV,4              GET ATOM NAME FOR VALUE MESSAGE               
  16026  -0754 00 4 00000  7952         PXD     0,4                TO AC                                         
  16027  -0534 00 4 03315  7953         LXD     CSV,4              AND RETURN IR4                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0150
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0150
 
 
  16030   0020 00 0 16104  7954         TRA     VALOF              PRINT VALUE MESSAGE                           
@@ -8485,7 +8485,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16104   0634 00 4 16117  8007   VALOF SXA     VAX,4              SAVE LINK IR                                  
  16105   0601 00 0 16076  8008         STO     AGA                ATOM NAME                                     
  16106  -0600 00 0 16077  8009         STQ     AGQ                VALUE OF EXPRESSION                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0151
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0151
 
 
  16107   0074 00 4 05214  8010         TSX     TERPRI,4           PRINT A BLANK LINE                            
@@ -8544,7 +8544,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16165   0020 00 0 16152  8063         TRA     INTGM              NEXT ITEM                                     
  16166  -0620 00 0 03446  8064   INTAA SLQ     INTGL              ALL DONE, STORE GO LIST                       
  16167  -0534 00 4 03445  8065   INTGA LXD     INTB,4,0           NEXT PROGRAM LOCATION                         
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0152
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0152
 
 
  16170  -3 00000 4 16262  8066         TXL     INTRN,4,0          RETURN WITH NIL IF RAN OUT OF STA     CLIPSCAN
@@ -8603,7 +8603,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16253  -3 00001 0 16254  8119   INTFC TXL     *+1,,1             UNLABELED GO TO POINT ERROR                   
  16254  -0634 00 4 01562  8120         SXD     $ERROR,4           SAVE LINK IR                                  
  16255   0534 00 4 03450  8121         LXA     INTGS,4            POINTER TO GO POINT LABEL                     
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0153
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0153
 
 
  16256  -0754 00 4 00000  8122         PXD     0,4                PUT IN DECREMENT                              
@@ -8662,7 +8662,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           8175  * THE FIRST ITEM IS ORG AS FOLLOWS-                                             
                           8176  *      NIL= IN BPS                                                              
                           8177  *      ATOM= AT SYMBOLIC LOCATION                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0154
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0154
 
 
                           8178  *      NUM= ATHIS NUMBER                                                        
@@ -8721,7 +8721,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16362   0601 00 0 16507  8231         STO     START              RESET MARKER                                  
  16363   0600 00 0 16510  8232         STZ     PASWD              INDICATE PASS 1                               
  16364   0074 00 4 16543  8233         TSX     PASS,4                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0155
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0155
 
 
  16365   0500 00 0 16501  8234         CLA     TAB                                                              
@@ -8780,7 +8780,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16452   0131 00 0 00000  8287         XCA                        SAVE AC                                       
  16453  -0534 00 2 16473  8288         LXD     NAME,2             NAME OF SUBR OR TYOE                          
  16454   0500 00 2 00000  8289         CLA     0,2                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0156
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0156
 
 
  16455  -0320 00 0 00460  8290         ANA     $DMASK             CDR OF NAME NOW IN AC                         
@@ -8839,7 +8839,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16527  -0634 00 4 01562  8343         SXD     $ERROR,4                                                         
  16530  -0754 00 4 00000  8344         PXD     0,4                                                              
  16531   0560 00 0 00503  8345         LDQ     $OCTD                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0157
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0157
 
 
  16532   0074 00 4 12636  8346         TSX     $MKNO,4                                                          
@@ -8898,7 +8898,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16606   0074 00 4 16535  8399         TSX     JUST,4                                                           
  16607  -0602 60 0 16506  8400         ORS*    STAR               THIS IS ADDRESS FIELD                         
  16610   0074 00 4 16622  8401         TSX     AFELD,4                                                          
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0158
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0158
 
 
  16611   0767 00 0 00017  8402         ALS     15                                                               
@@ -8957,7 +8957,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16667   544360600354     8455         BCI     1,*L  3*           UNDEFINED SYMBOL                              
  16670  -3 06705 4 16672  8456  PA     TXL     *+2,4,$SYM-1                                                     
  16671  -3 06706 4 16703  8457         TXL     FINX,4,$SYM                                                      
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0159
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0159
 
 
  16672  -3 06732 4 16674  8458         TXL     *+2,4,$SUBR-1                                                    
@@ -9016,7 +9016,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  16753   0020 00 0 16750  8511         TRA     TRP                                                              
  16754  -3 07107 4 17004  8512  NQT    TXL     FDLST,4,SPECAL-1                                                 
  16755   3 07110 4 17004  8513         TXH     FDLST,4,SPECAL     (SPECIAL NAME)                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0160
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0160
 
 
  16756   0560 00 0 00507  8514         LDQ     QSPECD             SPECIAL IN MQ                                 
@@ -9075,7 +9075,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  17042  -0734 00 4 00000  8567  PNL    PDX     0,4                                                              
  17043  -3 00000 4 17053  8568         TXL     PMK,4,0            END OF LIST, SO MAKE NEW ENTRY                
  17044   0500 00 4 00000  8569         CLA     0,4                                                              
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0161
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0161
 
 
  17045   0734 00 4 00000  8570         PAX     0,4                                                              
@@ -9134,7 +9134,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  17112  -3 06647 4 17136  8623         TXL     LNTR,4,$TRACE                                                    
  17113  -3 10156 4 17115  8624         TXL     *+2,4,$EXPR-1                                                    
  17114  -3 10157 4 17117  8625         TXL     LNEXP,4,$EXPR                                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0162
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0162
 
 
  17115  -3 10141 4 17101  8626         TXL     LNLP,4,$FEXPR-1                                                  
@@ -9193,7 +9193,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  17175   0520 00 0 17246  8679         ZET     LNTRS              TEST FOR TRACING                              
  17176   0020 00 0 17164  8680         TRA     LNTSB                                                            
  17177   0621 00 0 17254  8681         STA     LNTSX              MAKE A TSX                                    
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0163
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0163
 
 
  17200   0500 00 0 17254  8682         CLA     LNTSX              GET IT                                        
@@ -9252,7 +9252,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           8735  *                                                                               
  17255   0634 00 2 17316  8736  LST    SXA     LX2,2              SAVE IR2                                      
  17256   0500 00 4 00001  8737         CLA     1,4                TO GET N FROM FIRSTDECREMENT                  
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0164
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0164
 
 
  17257   0622 00 0 17261  8738         STD     LSN                TO DECREMENT IR4 FOR POINT EXIT       PAGE 175
@@ -9311,7 +9311,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  17342   1 00001 4 17343  8791  UNF    TXI     *+1,4,1            INCREMENT THE GET IR                          
  17343   3 00000 4 17351  8792  UNH    TXH     UND,4,**           TEST FOR LAST WORD RESTORED           PAGE 176
  17344   0500 00 4 00000  8793  UNG    CLA     **,4               GET SAVED ITEM (GOING FROM BOT TO TOP)        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0165
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0165
 
 
  17345   0734 00 2 00000  8794         PAX     0,2                ZERO ADDRESS INTICATES NOT NECESS RES         
@@ -9370,7 +9370,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  17427   0500 00 0 03326  8847         CLA     $ARG8                                                            
  17430   0601 00 1 00010  8848         STO     8,1                                                              
  17431   0500 00 0 03325  8849         CLA     $ARG7                                                            
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0166
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0166
 
 
  17432   0601 00 1 00007  8850         STO     7,1                                                              
@@ -9402,7 +9402,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           8876  *                                                                               
  17462                    8877         DECK                       PERMANENT ATOMS                               
  17462                    8878  TOPROG BSS     0                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0167
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0167
 
 
                           8879         EJECT                                                            PAGE 178
@@ -9426,7 +9426,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    00000  9021  ZZALST SYN )ALST                                                                
                    00000  9022  ZZ069B SYN )069B                                                                
                    00000  9023  ZZ069A SYN )069A                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0168
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0168
 
 
                           9024         EJECT                                                            PAGE 179
@@ -9485,7 +9485,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  66511   0 11266 0 10027  9077                 -II3,,-*-1         GREATER THAN P                        GENER048
  66512   0 11265 0 10015  9078             F16,,-*-1                                                    GENER049
  66513   0 11264 0 10005  9079             LABEL,,-*-1                                                  GENER050
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0169
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0169
 
 
  66514   0 11263 0 07775  9080             LAMBDA,,-*-1                                                 GENER051
@@ -9544,7 +9544,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  66601   0 11176 0 00001  9133                 1,,-*-1            *T* BINARY TRUE ATOM                  GENER104
  66602   0 11175 0 06671  9134             F27,,-*-1                                                    GENER105
  66603   0 11174 0 06706  9135                 SYM,,-*-1                                                GENER106
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0170
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0170
 
 
  66604   0 11173 0 06657  9136             TIMES,,-*-1                                                  GENER107
@@ -9603,7 +9603,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  66671   0 11106 0 06207  9189             H60,,-*-1                                                    GENER160
  66672   0 11105 0 06210  9190             H61,,-*-1                                                    GENER161
  66673   0 11104 0 06211  9191             H62,,-*-1                                                    GENER162
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0171
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0171
 
 
  66674   0 11103 0 06212  9192             H63,,-*-1                                                    GENER163
@@ -9655,7 +9655,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  66752   0 11025 0 07310  9238                 PJ39,,-*-1                                               GENER211
  66753   0 11024 0 10211  9239                 ERSETO,,-*-1       ERRORSET                              GENER212
  66754   0 11023 0 07760  9240                 PVW1,,-*-1         LAST OBJECT   - LEFTSHIFT             GENER213
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0172
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0172
 
 
                           9241         EJECT                                                            PAGE 184
@@ -9714,7 +9714,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67032   0 10745 0 07335  9294                 PNAME,,-*-1                                              GPLI0050
  67033   0 00000 0 10744  9295                 -*-1               APPLY                                 GPLI0051
  67034   0 00000 0 10743  9296                 -*-1                                                     GPLI0052
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0173
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0173
 
 
  67035  +214747437077     9297         OCT     214747437077                                             GPLI0053
@@ -9773,7 +9773,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67113   0 10664 0 77777  9350  )012           -1,,-*-1                                                 GPLI0106
  67114   0 10663 0 06733  9351                 SUBR,,-*-1                                               GPLI0107
  67115   0 10661 0 10662  9352                 -*-1,,-*-2                                               GPLI0108
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0174
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0174
 
 
  67116  -3 00001 0 15222  9353         TXL     CDRP,,1                                                  GPLI0109
@@ -9832,7 +9832,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67175   0 10601 0 10602  9406                 -*-1,,-*-2                                               GPLI0162
  67176  -3 00001 0 11705  9407         TXL     CAADRX,,1                                                GPLI0163
  67177   0 10600 0 07335  9408                 PNAME,,-*-1                                              GPLI0164
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0175
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0175
 
 
  67200   0 00000 0 10577  9409                 -*-1               CAADR                                 GPLI0165
@@ -9891,7 +9891,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67257   0 10520 0 07335  9462                 PNAME,,-*-1                                              GPLI0218
  67260   0 00000 0 10517  9463                 -*-1               CDDDR                                 GPLI0219
  67261   0 00000 0 10516  9464                 -*-1                                                     GPLI0220
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0176
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0176
 
 
  67262  +232424245177     9465         OCT     232424245177                                             GPLI0221
@@ -9950,7 +9950,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67341   0 10436 0 06733  9518                 SUBR,,-*-1                                               GPLI0274
  67342   0 10434 0 10435  9519                 -*-1,,-*-2                                               GPLI0275
  67343  -3 00001 0 07343  9520         TXL     CP1,,1                                                   GPLI0276
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0177
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0177
 
 
  67344   0 10433 0 07335  9521                 PNAME,,-*-1                                              GPLI0277
@@ -10009,7 +10009,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67424  +254523257777     9574         OCT     254523257777                                             GPLI0330
                           9575  *                                                                       GPLI0331
  67425   0 10352 0 77777  9576  )PJ19          -1,,-*-1                                                 GPLI0332
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0178
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0178
 
 
  67426   0 10351 0 06733  9577                 SUBR,,-*-1                                               GPLI0333
@@ -10068,7 +10068,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67506  +254626777777     9630         OCT     254626777777                                             GPLI0386
                           9631  *                                                                       GPLI0387
  67507   0 10270 0 77777  9632  )PJ35          -1,,-*-1                                                 GPLI0388
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0179
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0179
 
 
  67510   0 10267 0 10742  9633                 APVAL1,,-*-1                                             GPLI0389
@@ -10127,7 +10127,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67567   0 10210 0 77777  9686  )PJ41          -1,,-*-1                                                 GPLI0442
  67570   0 10207 0 06733  9687                 SUBR,,-*-1                                               GPLI0443
  67571   0 10205 0 10206  9688                 -*-1,,-*-2                                               GPLI0444
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0180
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0180
 
 
  67572  -3 00003 0 11560  9689         TXL     ERRSET,,3                                                GPLI0445
@@ -10186,7 +10186,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67650   0 10127 0 77777  9742  II11           -1,,-*-1                                                 GPLI0498
  67651   0 10126 0 06733  9743                 $SUBR,,-*-1                                              GPLI0499
  67652   0 10124 0 10125  9744                 -*-1,,-*-2                                               GPLI0500
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0181
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0181
 
 
  67653  -3 00001 0 14466  9745         TXL     FIXP,,1                                                  GPLI0501
@@ -10245,7 +10245,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  67731   0 10046 0 77777  9798  )231           -1,,-*-1                                                 GPLI0554
  67732   0 10045 0 06733  9799                 SUBR,,-*-1                                               GPLI0555
  67733   0 10043 0 10044  9800                 -*-1,,-*-2                                               GPLI0556
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0182
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0182
 
 
  67734  -3 00002 0 11771  9801         TXL     C$GET,,2                                                 GPLI0557
@@ -10304,7 +10304,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70013  -3 00002 0 16321  9854         TXL     C$LAP,,2                                                 GPLI0610
  70014   0 07763 0 07335  9855                 PNAME,,-*-1                                              GPLI0611
  70015   0 00000 0 07762  9856                 -*-1               LAP                                   GPLI0612
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0183
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0183
 
 
  70016   0 00000 0 07761  9857                 -*-1                                                     GPLI0613
@@ -10363,7 +10363,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70075  -3 00000 0 12676  9910         TXL     LOGAND,,0                                                GPLI0666
  70076   0 07701 0 07335  9911                 PNAME,,-*-1                                              GPLI0667
  70077   0 00000 0 07700  9912                 -*-1               LOGAND                                GPLI0668
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0184
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0184
 
 
  70100   0 00000 0 07677  9913                 -*-1                                                     GPLI0669
@@ -10422,7 +10422,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70157   0 00000 0 07620  9966                 -*-1               MAPLIST                               GPLI0722
  70160   0 07616 0 07617  9967                 -*-1,,-*-2                                               GPLI0723
  70161  -042147433162     9968         OCT     442147433162                                             GPLI0724
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0185
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0185
 
 
  70162   0 00000 0 07615  9969                 -*-1                                                     GPLI0725
@@ -10481,7 +10481,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70241   0 00000 0 07536  10022                 -*-1               NCONC                                 GPLI0778
  70242   0 00000 0 07535  10023                 -*-1                                                     GPLI0779
  70243  -052346452377     10024         OCT     452346452377                                             GPLI0780
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0186
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0186
 
 
                           10025  *                                                                       GPLI0781
@@ -10540,7 +10540,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           10078  *                                                                       GPLI0834
  70323   0 07454 0 77777  10079  II9            -1,,-*-1                                                 GPLI0835
  70324   0 07453 0 06733  10080                 $SUBR,,-*-1                                              GPLI0836
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0187
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0187
 
 
  70325   0 07451 0 07452  10081                 -*-1,,-*-2                                               GPLI0837
@@ -10599,7 +10599,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70404   0 07373 0 07335  10134                 PNAME,,-*-1                                              GPLI0890
  70405   0 07370 0 07372  10135                 -*-1,,-*-3         PERIOD                                GPLI0891
  70406   0 00000 0 07371  10136                 -*-1                                                     GPLI0892
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0188
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0188
 
 
  70407  -072551314624     10137         OCT     472551314624                                             GPLI0893
@@ -10658,7 +10658,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70466   0 00000 0 07311  10190                 -*-1                                                     GPLI0946
  70467  -075131456377     10191         OCT     475131456377                                             GPLI0947
                           10192  *                                                                       GPLI0948
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0189
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0189
 
 
  70470   0 07307 0 77777  10193  )PJ39          -1,,-*-1                                                 GPLI0949
@@ -10717,7 +10717,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70550   0 00000 0 07227  10246                 -*-1                                                     GPLI1002
  70551  -056377777777     10247         OCT     456377777777                                             GPLI1003
                           10248  *                                                                       GPLI1004
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0190
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0190
 
 
  70552   0 07225 0 77777  10249  )096           -1,,-*-1                                                 GPLI1005
@@ -10776,7 +10776,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70632   0 07144 0 07145  10302                 -*-1,,-*-2                                               GPLI1058
  70633  -3 00001 0 16272  10303         TXL     RETURN,,1                                                GPLI1059
  70634   0 07143 0 07335  10304                 $PNAME,,-*-1                                             GPLI1060
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0191
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0191
 
 
  70635   0 00000 0 07142  10305                 -*-1               RETURN                                GPLI1061
@@ -10835,7 +10835,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  70714  -057777777777     10358         OCT     457777777777                                             GPLI1114
  70715   0 07062 0 06706  10359                 SYM,,-*-1                                                GPLI1115
  70716  -0 00000 0 61253  10360         MZE     -C$RTRN                                                  GPLI1116
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0192
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0192
 
 
                           10361  *                                                                       GPLI1117
@@ -10894,7 +10894,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           10414  *                                                                       GPLI1170
  70776   0 07001 0 77777  10415  )109           -1,,-*-1                                                 GPLI1171
  70777   0 07000 0 06733  10416                 SUBR,,-*-1                                               GPLI1172
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0193
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0193
 
 
  71000   0 06776 0 06777  10417                 -*-1,,-*-2                                               GPLI1173
@@ -10953,7 +10953,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71057   0 00000 0 06720  10470                 -*-1               SUBLIS                                GPLI1226
  71060   0 00000 0 06717  10471                 -*-1                                                     GPLI1227
  71061  -226422433162     10472         OCT     626422433162                                             GPLI1228
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0194
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0194
 
 
                           10473  *                                                                       GPLI1229
@@ -11012,7 +11012,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71140   0 06636 0 06637  10526                 -*-1,,-*-2                                               GPLI1282
  71141  -3 00000 0 04101  10527         TXL     UNCONT,,0                                                GPLI1283
  71142   0 06635 0 07335  10528                 PNAME,,-*-1                                              GPLI1284
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0195
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0195
 
 
  71143   0 00000 0 06634  10529                 -*-1               UNCOUNT                               GPLI1285
@@ -11039,13 +11039,13 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71166   0 00000 0 06611  10550                 -*-1                                                     GPLI1306
  71167  -312551464777     10551         OCT     712551464777                                             GPLI1307
                           10552  *                                                                       GPLI1308
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0196
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0196
 
 
                           10553         EJECT                                                            PAGE 209
                           10554  *                                                                               
                           10555  *                                                                               
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0197
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0197
 
 
                           10556         EJECT                                                            PAGE 210
@@ -11104,7 +11104,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71232   0 00000 0 06545  10609                 -*-1               $IL17$                                GPLA0050
  71233   0 00000 0 06544  10610                 -*-1                                                     GPLA0051
  71234  -133143010753     10611         OCT     533143010753                                             GPLA0052
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0198
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0198
 
 
                           10612             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *GPLA0053
@@ -11163,7 +11163,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71310  +317777777777     10665         OCT     317777777777                                             GPLA0106
                           10666             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *GPLA0107
  71311   0 06466 0 07335  10667  HH32           PNAME,,-*-1        +0                                    GPLA0108
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0199
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0199
 
 
  71312   0 00000 0 06465  10668                 -*-1               $IL32$                                GPLA0109
@@ -11222,7 +11222,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           10721             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *GPLA0162
  71365   0 06412 0 07335  10722  HH45           PNAME,,-*-1        N                                     GPLA0163
  71366   0 00000 0 06411  10723                 -*-1               N                                     GPLA0164
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0200
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0200
 
 
  71367   0 00000 0 06410  10724                 -*-1                                                     GPLA0165
@@ -11281,7 +11281,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71442  -133143050753     10777         OCT     533143050753                                             GPLA0218
                           10778             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *GPLA0219
  71443   0 06334 0 07335  10779  HH60           PNAME,,-*-1        BLANK                                 GPLA0220
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0201
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0201
 
 
  71444   0 00000 0 06333  10780                 -*-1                                                     GPLA0221
@@ -11340,7 +11340,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71517   0 06260 0 07335  10833  HH72           PNAME,,-*-1        END OF RECORD                         GPLA0274
  71520   0 06255 0 06257  10834                 -*-1,,-*-3         $EOR$                                 GPLA0275
  71521   0 00000 0 06256  10835                 -*-1                                                     GPLA0276
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0202
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0202
 
 
  71522  -132546515377     10836         OCT     532546515377                                             GPLA0277
@@ -11399,7 +11399,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71600   0 06373 0 77777  10889  )H51           -1,,-HH51                                                GPLA0330
  71601   0 06377 0 77777  10890  )H50           -1,,-HH50                                                GPLA0331
  71602   0 06403 0 77777  10891  )H47           -1,,-HH47                                                GPLA0332
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0203
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0203
 
 
  71603   0 06407 0 77777  10892  )H46           -1,,-HH46                                                GPLA0333
@@ -11442,11 +11442,11 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
  71650   0 06607 1 77777  10929  )H01           -1,1,-HH01                                               GPLA0370
  71651   0 06610 1 77777  10930  )H00           -1,1,-HH00                                               GPLA0371
  71652                    10931  UPERML BSS     0                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0204
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0204
 
 
                           10932         EJECT                                                            PAGE 217
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0205
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0205
 
 
                           10933         EJECT                                                            PAGE 218
@@ -11505,7 +11505,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    06210  10986  H61    SYN     -)H61                                                    GPLA0421
                    06211  10987  H62    SYN     -)H62                                                    GPLA0422
                    06212  10988  H63    SYN     -)H63                                                    GPLA0423
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0206
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0206
 
 
                    06213  10989  H64    SYN     -)H64                                                    GPLA0424
@@ -11564,7 +11564,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    07716  11042   LOADA SYN     -)234A                                                           
                    07646  11043  PMAPCA SYN     -)065                                                            
                    07614  11044   MAXP  SYN     -II7                                                             
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0207
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0207
 
 
                    07574  11045   MINUS SYN     -)070                                                            
@@ -11623,7 +11623,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    10410  11098  PJ1    SYN     -)PJ1                                                        0000
                    11013  11099  PJ2    SYN     -)PJ2                                                        0001
                    10221  11100  PJ4    SYN     -)PJ4                                                        0003
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0208
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0208
 
 
                    10251  11101  PJ5    SYN     -)PJ5                                                        0004
@@ -11682,7 +11682,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                    04461  11154   EQUAL SYN     L$EQUAL                                                          
                    12346  11155   EROR1 SYN     F$EROR1                                                          
                    15454  11156   EVAL  SYN     A$EVAL                                                           
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0209
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0209
 
 
                    11310  11157   EVALQ SYN     S$EVALQ                                                          
@@ -11741,7 +11741,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           11210  *                                                                               
  71652   0 00000 0 00000  11211   BUTCH                                                                          
                    05766  11212  BUTCHL EQU     NILSXX-*+1         LENGTH OF BUTCH REGION                        
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0210
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0210
 
 
                           11213                                                                                  
@@ -11770,7 +11770,7 @@ ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Su
                           11236  * eval: (when (fboundp 'asm7090) (asm7090))                                     
                           11237  * End:                                                                          
                    00000  11238  ENDEND END     0                                                                
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0211
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0211
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -11829,7 +11829,7 @@ SYMBOL TABLE
  )100     70640    10309  11064 
  )101     70650    10318  11065 
  )107     70746    10388  11073 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0212
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0212
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -11888,7 +11888,7 @@ SYMBOL TABLE
  )H25     71624    10909  10958 
  )H26     71623    10908  10959 
  )H27     71622    10907  10960 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0213
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0213
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -11947,7 +11947,7 @@ SYMBOL TABLE
  )PJ16    67403    9556  11111 
  )PJ17    70052    9889  11112 
  )PJ18    70333    10088  11113 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0214
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0214
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12006,7 +12006,7 @@ SYMBOL TABLE
  APVALD   00474     378 
  ARG1     03317    1941  2375  2388  5612  5619 
  ARG10    03330    1950  8703  8843 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0215
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0215
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12065,7 +12065,7 @@ SYMBOL TABLE
  BKOR     04010    2172  2215 
  BLANKS   00472     375  3031  3032  2324  3132  3139  3763  4991  5004  5028  5181  5790 
  BLKB     04022    2182  2170  2173 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0216
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0216
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12124,7 +12124,7 @@ SYMBOL TABLE
  CNSX     03747    2130  2115 
  CNTA     04064    2229  2225 
  CNTB     04076    2239  2228 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0217
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0217
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12183,7 +12183,7 @@ SYMBOL TABLE
  ECONAT   00000     409  1910 
  EEEEE    00001    11224  11232 
  END0     02403    1429 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0218
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0218
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12242,7 +12242,7 @@ SYMBOL TABLE
  EVQERR   11423    5345  5506 
  EVQRTS   11516    5409  1555  5271  5292  5349  5351 
  EXPR     10157    11025  5369  5370  7363  7364  7724  7725  8624  8625  9065 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0219
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0219
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12301,7 +12301,7 @@ SYMBOL TABLE
  FSUBR    10103    11031   382  1475  1476  5372  5373  7722  7723  8460  8461  8620  8621  9072  9273  9500 
                          9779  9808  9837  9881  9908  9917  9926  9973  9982  10098  10152  10203  10230  10398 
                          10510 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0220
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0220
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12360,7 +12360,7 @@ SYMBOL TABLE
  H40      06167    10969   407  9173  9559 
  H40D     00530     407  5943 
  H41      06170    10970  9174 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0221
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0221
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12419,7 +12419,7 @@ SYMBOL TABLE
  HH23     71251    10628  10911 
  HH24     71255    10633  10910 
  HH25     71261    10638  10909 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0222
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0222
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12478,7 +12478,7 @@ SYMBOL TABLE
  II18     70562    10258  11135  9112 
  II3      67751    9816  9077 
  II4      70032    9871  9082 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0223
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0223
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12537,7 +12537,7 @@ SYMBOL TABLE
  MINP     07604    11046  6817 
  MINUS    07574    11045  9090 
  MINUSP   14500    7081  10002 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0224
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0224
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12596,7 +12596,7 @@ SYMBOL TABLE
  PJ11     07345    11107  9214 
  PJ12     10705    11108  9215 
  PJ14     07012    11109  9216 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0225
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0225
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12655,7 +12655,7 @@ SYMBOL TABLE
  POWR     13572    11186  6570 
  PPTIND  000040B   4887  3108  4863  4868 
  PPTOUT   00363     853  3104 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0226
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0226
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12714,7 +12714,7 @@ SYMBOL TABLE
  QD5      00444     353 
  QD6      00445     354  4977 
  QD7      00446     355 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0227
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0227
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12773,7 +12773,7 @@ SYMBOL TABLE
  RPLACD   10164    4649  10321 
  RPLACW   10170    4653 
  RTX      00702     732   516 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0228
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0228
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12832,7 +12832,7 @@ SYMBOL TABLE
  STRMD    02060    1184  1155 
  STRN     02053    1181  1141 
  STRO     02007    1142 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0229
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0229
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12891,7 +12891,7 @@ SYMBOL TABLE
  TIME     00000     976   976  1835  5267  5291  5330  10501 
  TIMES    06657    11082   395  6810  9136 
  TOPROG   17462    8878  1344 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0230
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0230
 SYMBOL TABLE
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12919,7 +12919,7 @@ SYMBOL TABLE
  ZZ069A   00000    9023  9087 
  ZZ069B   00000    9022  9086 
  ZZALST   00000    9021  9030 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0231
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0231
 SYMBOL TABLE : HEAD B
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -12975,7 +12975,7 @@ SYMBOL TABLE : HEAD B
  X4       03467    2062  4251  4258  4262 
  X5       03470    2063  4272  4280 
  ZERC     00177     157   162 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0232
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0232
 SYMBOL TABLE : HEAD C
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13034,7 +13034,7 @@ SYMBOL TABLE : HEAD C
  ERCC     16517    8330  8447  8453 
  FCN31    12005    5604  5594 
  FDLST    17004    8536  8512  8513 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0233
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0233
 SYMBOL TABLE : HEAD C
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13093,7 +13093,7 @@ SYMBOL TABLE : HEAD C
  LNTSB    17164    8669  8680 
  LNTSX    17254    8730  8681  8682 
  LOP1     16544    8363  8374  8384  8390 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0234
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0234
 SYMBOL TABLE : HEAD C
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13152,7 +13152,7 @@ SYMBOL TABLE : HEAD C
  REM      16515    8328  8544  8546  8553  8556 
  REST     16505    8320  8204  8244  8363  8366 
  RS       77664     720   570   579   587   598   601   613   616   627   632   649   666 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0235
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0235
 SYMBOL TABLE : HEAD C
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13180,7 +13180,7 @@ SYMBOL TABLE : HEAD C
  UNR      17354    8801  8781  8782 
  UNWND    17330    8781  1033  5481 
  ZLR      01176     715   702 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0236
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0236
 SYMBOL TABLE : HEAD A
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13239,7 +13239,7 @@ SYMBOL TABLE : HEAD A
  EVAL     15454    7690  11156  7262  7292  7468  7477  7920 
  EVAPG    15731    7879  7889 
  EVCDR    03376    1998 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0237
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0237
 SYMBOL TABLE : HEAD A
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13298,7 +13298,7 @@ SYMBOL TABLE : HEAD A
  R2       15046    7375  7362 
  R21      15036    7366 
  R33      15115    7417  7447 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0238
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0238
 SYMBOL TABLE : HEAD A
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13307,7 +13307,7 @@ SYMBOL TABLE : HEAD A
  VALOF    16104    8007  7441  7954  7970  8667 
  VALV     16103    8002  8011 
  VAX      16117    8018  8007 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0239
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0239
 SYMBOL TABLE : HEAD E
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13366,7 +13366,7 @@ SYMBOL TABLE : HEAD E
  MAC      02656    1636  1638 
  MAD      02671    1647  1644 
  MAE      02666    1644  1646 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0240
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0240
 SYMBOL TABLE : HEAD E
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13425,7 +13425,7 @@ SYMBOL TABLE : HEAD E
  RCT6     03216    1870  1873  1750 
  RCTM     03174    1862  1753 
  RCX      03043    1759  1536  1736  1841 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0241
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0241
 SYMBOL TABLE : HEAD E
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13466,7 +13466,7 @@ SYMBOL TABLE : HEAD E
  TMPTM    03274    1906  1579 
  ZPDL     02761    1709  1228 
  ZPDLA    02760    1708  1552 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0242
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0242
 SYMBOL TABLE : HEAD H
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13506,7 +13506,7 @@ SYMBOL TABLE : HEAD H
                          6069  6073  6074  6076  6077 
  T2       12756    6111  6092  6101 
  TUBA     11641    5483  5472  5473 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0243
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0243
 SYMBOL TABLE : HEAD F
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13565,7 +13565,7 @@ SYMBOL TABLE : HEAD F
  CURC     12634    5980  11149  5820 
  CURC1    12633    5979  11150  5821 
  CV10     06755    3898  3876 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0244
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0244
 SYMBOL TABLE : HEAD F
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13624,7 +13624,7 @@ SYMBOL TABLE : HEAD F
  JEAN     12314    5843  5825 
  JOYCE    12233    5794  5787 
  LAMB     12243    5802  5780 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0245
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0245
 SYMBOL TABLE : HEAD F
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13683,7 +13683,7 @@ SYMBOL TABLE : HEAD F
  SHIFT    07117    3998  3996 
  STEW     12276    5829  5783 
  STZ      07161    4037  3925 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0246
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0246
 SYMBOL TABLE : HEAD F
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13708,7 +13708,7 @@ SYMBOL TABLE : HEAD F
  XT2      07137    4014  4011 
  XT3      07133    4010  4007 
  ZERO     00000    5954  5954  5748 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0247
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0247
 SYMBOL TABLE : HEAD L
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13744,7 +13744,7 @@ SYMBOL TABLE : HEAD L
  LOD10    77756      73    87    88 
  LOD11    77765      80    72    83    89 
  STS      77645     110    91 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0248
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0248
 SYMBOL TABLE : HEAD Q
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13803,7 +13803,7 @@ SYMBOL TABLE : HEAD Q
  AMMMF    14155    6828  6807  6814  6821 
  AMQ      03503    2076  6842  6851  6866  6881  6911 
  AMR      14340    6945  6904  6908 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0249
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0249
 SYMBOL TABLE : HEAD Q
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13862,7 +13862,7 @@ SYMBOL TABLE : HEAD Q
  MRXR     14631    7194  7189 
  MULT     14134    6809 
  MXIR     14276    6909  6903 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0250
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0250
 SYMBOL TABLE : HEAD Q
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13909,7 +13909,7 @@ SYMBOL TABLE : HEAD Q
  ZPIR     14525    7106  7056  7065  7069  7077  7093  7109  7115 
  ZPT      14527    7108  7098  7110 
  ZPTS     14531    7110  7103  7104 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0251
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0251
 SYMBOL TABLE : HEAD G
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13968,7 +13968,7 @@ SYMBOL TABLE : HEAD G
  P31      14053    6757  6756 
  P32      14050    6754  6757 
  P33      14064    6766  6765 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0252
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0252
 SYMBOL TABLE : HEAD G
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -13991,7 +13991,7 @@ SYMBOL TABLE : HEAD G
  SQ       13726    6672  6604 
  W        13725    6671  6629  6635  6646  6647  6648  6649  6650  6651  6777 
  ZERO     00000    6660  6660  6580  6581  6585  6628  6636  6641  6704  6733  6738  6753  6763 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0253
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0253
 SYMBOL TABLE : HEAD R
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14050,7 +14050,7 @@ SYMBOL TABLE : HEAD R
  INTB     03445    2040  8042  8065  8068  8082  8088  8105 
  INTE     16271    8135  8043  8052  8055 
  INTEB    16202    8076  8087 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0254
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0254
 SYMBOL TABLE : HEAD R
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14109,7 +14109,7 @@ SYMBOL TABLE : HEAD R
  SASL1    10017    4517  4522  4523 
  SASP1    10024    4523  4513 
  SASP2    10023    4522  4515 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0255
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0255
 SYMBOL TABLE : HEAD R
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14149,7 +14149,7 @@ SYMBOL TABLE : HEAD R
  SY       03476    2070  4175  4179 
  SZ       03474    2068  4188  4189  4193  4197  4199  4202  4203  4205  4212 
  TWA      10130    4603  4583 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0256
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0256
 SYMBOL TABLE : HEAD D
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14181,7 +14181,7 @@ SYMBOL TABLE : HEAD D
  WOTV     01335     839   788 
  WOTW     01336     840   789 
  WOTX     01245     780   761   776 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0257
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0257
 SYMBOL TABLE : HEAD I
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14240,7 +14240,7 @@ SYMBOL TABLE : HEAD I
  RDJT1    06053    3437  3429  3492 
  RDJT2    06137    3492  3466  3484 
  RDLST    06415    3645  3416  3418  3495  3615 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0258
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0258
 SYMBOL TABLE : HEAD I
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14278,7 +14278,7 @@ SYMBOL TABLE : HEAD I
  TPF      06162    3513  3498 
  TPFA     06154    3506  3514 
  VALUE    06533    3732  11203  3657  3660  3692  3709 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0259
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0259
 SYMBOL TABLE : HEAD O
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14300,7 +14300,7 @@ SYMBOL TABLE : HEAD O
  TIR      01531     970   962 
  TR       01533     972   964   965   968 
  ZERO     01513     952   919   955   956 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0260
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0260
 SYMBOL TABLE : HEAD S
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14359,7 +14359,7 @@ SYMBOL TABLE : HEAD S
  ODER     10770    5076  4953  4958  4961  4966 
  ODLT     11045    5121  5010  5013  5015  5016  5017  5018  5019 
  ODSAR    11044    5120  5021  5024 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0261
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0261
 SYMBOL TABLE : HEAD S
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14418,7 +14418,7 @@ SYMBOL TABLE : HEAD S
  OVRLZ    10513    4876  4711 
  OVSET    10451    4839  4772 
  OVSRC    10241    4726  4729 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0262
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0262
 SYMBOL TABLE : HEAD S
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14447,7 +14447,7 @@ SYMBOL TABLE : HEAD S
  OVTXX    11216    5206  5193 
  REPL     10162    4647  4642  4649  4653 
  RPLEX    10161    4646  4652  4656 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0263
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0263
 SYMBOL TABLE : HEAD P
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14463,7 +14463,7 @@ SYMBOL TABLE : HEAD P
  PAS2     07775    4492  4469 
  PAS3     03442    2036  4470  4481  4489 
  PAS4     03443    2037  4471  4484  4490 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0264
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0264
 SYMBOL TABLE : HEAD T
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14522,7 +14522,7 @@ SYMBOL TABLE : HEAD T
  FLNX     05666    3280  3162  3166  3276 
  FLNY     05667    3281  3172 
  FLNZ     05670    3282  3173 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0265
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0265
 SYMBOL TABLE : HEAD T
 
  SYMBOL    ADDR    DEF            REFERENCES
@@ -14581,7 +14581,7 @@ SYMBOL TABLE : HEAD T
  PR1      05072    2896  2759  2808  2891 
  PR2      04713    2767 
  PR3      04720    2773  2766 
-ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sun Jul 30 06:04:25 2006 Page 0266
+ASM7090 2.2.2     BONNIE-S BIRTHDAY ASSEMBLY                                  Sat Dec 15 15:35:26 2012 Page 0266
 SYMBOL TABLE : HEAD T
 
  SYMBOL    ADDR    DEF            REFERENCES

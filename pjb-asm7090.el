@@ -37,7 +37,6 @@
   (require 'cl)
   (load "cl-seq"  t t)
   (load "cl-macs" t t))
-(require 'cl)
 (require 'pjb-cl)
 (require 'asm-mode)
 (require 'font-lock)
@@ -54,13 +53,13 @@
   (let ((start (getf keys :start))
         (end   (getf keys :end)))
     (cond
-      ((and start (= start (length sequence))) nil)
-      ((and end (< (length sequence) end))
-       (setf keys (copy-seq keys))
-       (setf (getf keys :end) (length sequence))
-       (apply (function position-if) item sequence keys))
-      (t
-       (apply (function position-if) item sequence keys)))))
+     ((and start (= start (length sequence))) nil)
+     ((and end (< (length sequence) end))
+      (setf keys (copy-seq keys))
+      (setf (getf keys :end) (length sequence))
+      (apply (function position-if) item sequence keys))
+     (t
+      (apply (function position-if) item sequence keys)))))
 
 
 ;; (defun POSITION (item sequence &rest keys)
@@ -70,11 +69,11 @@
 
 (defun search-asm7090-fields (limit)
   (macrolet ((sel (len min max sma bet big)
-               (let ((vlen (gensym)) (vmin (gensym)) (vmax (gensym)))
-                 `(let ((,vlen ,len) (,vmin ,min) (,vmax ,max))
-                    (cond ((< ,vlen ,min)  ,sma)
-                          ((<= ,vlen ,max) ,bet)
-                          (t               ,big))))))
+                  (let ((vlen (gensym)) (vmin (gensym)) (vmax (gensym)))
+                    `(let ((,vlen ,len) (,vmin ,min) (,vmax ,max))
+                       (cond ((< ,vlen ,min)  ,sma)
+                             ((<= ,vlen ,max) ,bet)
+                             (t               ,big))))))
     (let* ((start (progn (beginning-of-line) (point)))
            (end   (progn (end-of-line)       (point)))
            (line (buffer-substring-no-properties start end)))
@@ -83,108 +82,108 @@
       (setf limit (1+ end))
       (beginning-of-line) 
       (cond
-        ((= 0 (length line))
-         ;; (message "  exit 0")
-         (re-search-forward 
-          "^\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
-        ((= (aref line 0) +asm7090-ibsys-char+)
-         ;; (message "  exit 1")
-         (re-search-forward 
-          "^\\(\\)\\(\\)\\(\\)\\(\\)\\(.\\{1,72\\}\\)\\(.\\{0,8\\}\\)\n" limit t))
-        ((= (aref line 0) +asm7090-comment-char+)
-         ;; (message "  exit 2")
-         (re-search-forward 
-          "^\\(\\)\\(\\)\\(\\)\\(.\\{1,72\\}\\)\\(\\)\\(.\\{0,8\\}\\)\n" limit t))
-        ((re-search-forward             ; only spaces
-          "^ +\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
-        ;; (message "  exit 3") t
-        ((< (length line) 7)
-         ;; (message "  exit 4")
-         (re-search-forward 
-          "^\\(.\\{0,6\\}\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
-        (t (let ((labs 0) (labe 6)
-                 cods code
-                 args arge
-                 coms come
-                 nums nume)
-             ;; (message "  exit 5")
-             (setf cods (POSITION-IF (lambda (ch) (/= ch +space+)) line
-                                     :start 6 :end 15))
-             ;; (message "cods=%S" cods)
-             (if cods
-                 (setf code (min 72 (or (POSITION +space+ line :start cods)
-                                        (length line))))
-                 (setf cods 6
-                       code 6))
-             ;; (message "cods=%S code=%S" cods code)
-             (setf args (POSITION-IF (lambda (ch) (/= ch +space+)) line
-                                     :start code :end 16))
-             ;; (message "args=%S" args)
-             (if args
-                 (setf args (min 72 args)
-                       arge (min 72 (or (POSITION +space+ line :start args)
-                                        (length line))))
-                 (setf args code
-                       arge code))
-             ;; (message "OPCODE= %S"(subseq line cods code))
-             (when (STRING-EQUAL (subseq line cods code) "BCI")
-               (let* ((comma (POSITION (CHARACTER ",") line
-                                       :start args :end arge))
-                      (size  (HANDLER-CASE
-                                 (parse-integer line args
-                                                (min arge (or comma arge)))
-                               (error () nil))))
-                 ;; (message "SIZE=%S" size)
-                 (when (and comma size)
-                   (setf arge (min 72 (+ comma 1 (* 6 size)) (length line))))))
-             ;; (message "args=%S arge=%S" args arge)
-             (setf coms (POSITION-IF (lambda (ch) (/= ch +space+)) line
-                                     :start arge))
-             ;; (message "coms=%S" coms)
-             (if coms
-                 (setf coms (min 72 coms)
-                       come (min 72 (length line)))
-                 (setf coms arge
-                       come arge))
-             ;; (message "coms=%S come=%S" coms come)
-             (if (<= 72 (length line))
-                 (setf nums 72
-                       nume (min 80 (length line)))
-                 (setf nums (length line)
-                       nume (length line)))
-             ;; (message "nums=%S nume=%S" nums nume)
-             (prog1
-                 (re-search-forward
-                  (apply (function concat)
-                         (list "^"
-                               (format "\\(.\\{%d\\}\\)" (- labe labs))
-                               (format " \\{%d\\}"       (- cods labe))
-                               (format "\\(.\\{%d\\}\\)" (- code cods))
-                               (format " \\{%d\\}"       (- args code))
-                               (format "\\(.\\{%d\\}\\)" (- arge args))
-                               (format " \\{%d\\}"       (- coms arge))
-                               (format "\\(.\\{%d\\}\\)" (- come coms))
-                               (format " \\{%d\\}"       (- nums come))
-                               "\\(\\)" ; IBSYS
-                               (format "\\(.\\{%d\\}\\)" (- nume nums))
-                               "\n"))
-                  limit t)
-               (when nil
-                 (message "line=%S\nlabel=%3d %S\nopcod=%3d %S\nargum=%3d %S\ncomnt=%3d %S\nibsys=%3d %S\nnmber=%3d %S\n"
-                          line
-                          (length (match-string-no-properties 1))
-                          (match-string-no-properties 1)
-                          (length (match-string-no-properties 2))
-                          (match-string-no-properties 2)
-                          (length (match-string-no-properties 3))
-                          (match-string-no-properties 3)
-                          (length (match-string-no-properties 4))
-                          (match-string-no-properties 4)
-                          (length (match-string-no-properties 5))
-                          (match-string-no-properties 5)
-                          (length (match-string-no-properties 6))
-                          (match-string-no-properties 6)))
-               )))))))
+       ((= 0 (length line))
+        ;; (message "  exit 0")
+        (re-search-forward 
+         "^\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
+       ((= (aref line 0) +asm7090-ibsys-char+)
+        ;; (message "  exit 1")
+        (re-search-forward 
+         "^\\(\\)\\(\\)\\(\\)\\(\\)\\(.\\{1,72\\}\\)\\(.\\{0,8\\}\\)\n" limit t))
+       ((= (aref line 0) +asm7090-comment-char+)
+        ;; (message "  exit 2")
+        (re-search-forward 
+         "^\\(\\)\\(\\)\\(\\)\\(.\\{1,72\\}\\)\\(\\)\\(.\\{0,8\\}\\)\n" limit t))
+       ((re-search-forward              ; only spaces
+         "^ +\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
+       ;; (message "  exit 3") t
+       ((< (length line) 7)
+        ;; (message "  exit 4")
+        (re-search-forward 
+         "^\\(.\\{0,6\\}\\)\\(\\)\\(\\)\\(\\)\\(\\)\\(\\)\n" limit t))
+       (t (let ((labs 0) (labe 6)
+                cods code
+                args arge
+                coms come
+                nums nume)
+            ;; (message "  exit 5")
+            (setf cods (POSITION-IF (lambda (ch) (/= ch +space+)) line
+                                    :start 6 :end 15))
+            ;; (message "cods=%S" cods)
+            (if cods
+              (setf code (min 72 (or (POSITION +space+ line :start cods)
+                                     (length line))))
+              (setf cods 6
+                    code 6))
+            ;; (message "cods=%S code=%S" cods code)
+            (setf args (POSITION-IF (lambda (ch) (/= ch +space+)) line
+                                    :start code :end 16))
+            ;; (message "args=%S" args)
+            (if args
+              (setf args (min 72 args)
+                    arge (min 72 (or (POSITION +space+ line :start args)
+                                     (length line))))
+              (setf args code
+                    arge code))
+            ;; (message "OPCODE= %S"(subseq line cods code))
+            (when (STRING-EQUAL (subseq line cods code) "BCI")
+              (let* ((comma (POSITION (CHARACTER ",") line
+                                      :start args :end arge))
+                     (size  (HANDLER-CASE
+                                (parse-integer line args
+                                               (min arge (or comma arge)))
+                              (error () nil))))
+                ;; (message "SIZE=%S" size)
+                (when (and comma size)
+                  (setf arge (min 72 (+ comma 1 (* 6 size)) (length line))))))
+            ;; (message "args=%S arge=%S" args arge)
+            (setf coms (POSITION-IF (lambda (ch) (/= ch +space+)) line
+                                    :start arge))
+            ;; (message "coms=%S" coms)
+            (if coms
+              (setf coms (min 72 coms)
+                    come (min 72 (length line)))
+              (setf coms arge
+                    come arge))
+            ;; (message "coms=%S come=%S" coms come)
+            (if (<= 72 (length line))
+              (setf nums 72
+                    nume (min 80 (length line)))
+              (setf nums (length line)
+                    nume (length line)))
+            ;; (message "nums=%S nume=%S" nums nume)
+            (prog1
+                (re-search-forward
+                 (apply (function concat)
+                        (list "^"
+                              (format "\\(.\\{%d\\}\\)" (- labe labs))
+                              (format " \\{%d\\}"       (- cods labe))
+                              (format "\\(.\\{%d\\}\\)" (- code cods))
+                              (format " \\{%d\\}"       (- args code))
+                              (format "\\(.\\{%d\\}\\)" (- arge args))
+                              (format " \\{%d\\}"       (- coms arge))
+                              (format "\\(.\\{%d\\}\\)" (- come coms))
+                              (format " \\{%d\\}"       (- nums come))
+                              "\\(\\)"  ; IBSYS
+                              (format "\\(.\\{%d\\}\\)" (- nume nums))
+                              "\n"))
+                 limit t)
+              (when nil
+                (message "line=%S\nlabel=%3d %S\nopcod=%3d %S\nargum=%3d %S\ncomnt=%3d %S\nibsys=%3d %S\nnmber=%3d %S\n"
+                         line
+                         (length (match-string-no-properties 1))
+                         (match-string-no-properties 1)
+                         (length (match-string-no-properties 2))
+                         (match-string-no-properties 2)
+                         (length (match-string-no-properties 3))
+                         (match-string-no-properties 3)
+                         (length (match-string-no-properties 4))
+                         (match-string-no-properties 4)
+                         (length (match-string-no-properties 5))
+                         (match-string-no-properties 5)
+                         (length (match-string-no-properties 6))
+                         (match-string-no-properties 6)))
+              )))))))
 
 
 (defun split-asm7090-fields ()
@@ -274,13 +273,13 @@
     (RQL -0773 T Y "Rotate MQ Left")
     (LDQ +0560 F T Y "Load MQ")
     (STQ -0600 F T Y "Store MQ")
-    (SLQ -0620 F T Y "Store Left Half MQ") ; (setcdr! y (cdr mq))
+    (SLQ -0620 F T Y "Store Left Half MQ")    ; (setcdr! y (cdr mq))
     (STO +0601 F T Y "Store")
     (SLW +0602 F T Y "Store Logical Word")
     (STP +0630 F T Y "Store Prefix")
-    (STD +0622 F T Y "Store Decrement") ; (setcdr! y (cdr a))
+    (STD +0622 F T Y "Store Decrement")       ; (setcdr! y (cdr a))
     (STT +0625 F T Y "Store Tag")
-    (STA +0621 F T Y "Store Address")   ; (setcar! y (car a))
+    (STA +0621 F T Y "Store Address")         ; (setcar! y (car a))
     (STL -0625 F T Y "Store Instruction Location Counter")
     (STR -1 "Store Location and Trap")
     (STZ +0600 F T Y "Store Zero")
@@ -311,31 +310,31 @@
     (TXL -3 D T Y "Transfer on Index Low or Equal")
     (TIX +2 D T Y "Transfer on Index")
     (TNX -2 D T Y "Transfer on No Index")
-    (PSE +0760 T (OR 00140                 ; slf
-                  (INTEGER 00141 00144)    ; sln
-                  (INTEGER 00161 00166)    ; swt
-                  (INTEGER 01341 01342)    ; spu
-                  (INTEGER 02341 02342)
-                  (INTEGER 03341 03342)
-                  (INTEGER 04341 04342)
-                  (INTEGER 05341 05342)
-                  (INTEGER 06341 06342)
-                  (INTEGER 07341 07342)
-                  (INTEGER 10341 10342)
-                  01360 02360 03360 04360 05360 06360 07360 10360 ; spt
-                  (INTEGER 01361 01362) ; spr
-                  (INTEGER 02361 02362)
-                  (INTEGER 03361 03362)
-                  (INTEGER 04361 04362)
-                  (INTEGER 05361 05362)
-                  (INTEGER 06361 06362)
-                  (INTEGER 07361 07362)
-                  (INTEGER 10361 10362))  "Plus Sense")
+    (PSE +0760 T (OR 00140 ; slf
+                     (INTEGER 00141 00144) ; sln
+                     (INTEGER 00161 00166) ; swt
+                     (INTEGER 01341 01342) ; spu
+                     (INTEGER 02341 02342)
+                     (INTEGER 03341 03342)
+                     (INTEGER 04341 04342)
+                     (INTEGER 05341 05342)
+                     (INTEGER 06341 06342)
+                     (INTEGER 07341 07342)
+                     (INTEGER 10341 10342)
+                     01360 02360 03360 04360 05360 06360 07360 10360 ; spt
+                     (INTEGER 01361 01362) ; spr
+                     (INTEGER 02361 02362)
+                     (INTEGER 03361 03362)
+                     (INTEGER 04361 04362)
+                     (INTEGER 05361 05362)
+                     (INTEGER 06361 06362)
+                     (INTEGER 07361 07362)
+                     (INTEGER 10361 10362))  "Plus Sense")
     (MSE -0760 T (INTEGER 00141 00144) "Minus Sense")
     (BTT -0760 T (OR 01000 02000 03000 04000 05000 06000 07000 10000)
-     "Beginning of Tape test")
+         "Beginning of Tape test")
     (ETT -0760 T (OR 01000 02000 03000 04000 05000 06000 07000 10000)
-     "End of Tape test")
+         "End of Tape test")
     (IOT +0760 T 00005 "Input-Output Check Test")
     (PBT -0760 T 00001 "P-Bit Test")
     (LBT +0760 T 00001 "Low-Order Bit Test")
@@ -481,9 +480,9 @@
     (ENB +0564 F T Y "Enable Traps from Y")
     (RCT +0760 T 00014 "Restore Channel Traps")
     (ESNT -0021 F T Y "Enter Storage Nullification and Transfer"
-     "Enters 709 mode")
+          "Enters 709 mode")
     (LSNM -0760 T 00010 "Leave Storage Nullification Mode"
-     "Leaves 709 mode")
+          "Leaves 709 mode")
     (ESTM -0760 T 00005 "Enter Select Trap Mode")
     (ECTM -0760 T 00006 "Enter Copy Trap Mode")
     (EFTM -0760 T 00002 "Enter Floating Trap Mode")
@@ -498,8 +497,8 @@
   (let ((desc (find-if (lambda (desc) (STRING-EQUAL (first desc) codop))
                        +codop-7090+)))
     (message (if desc
-                 (format "%s: %s" (first desc) (find-if (function stringp) desc))
-                 (format "%s: unknown" (first desc))))))
+               (format "%s: %s" (first desc) (find-if (function stringp) desc))
+               (format "%s: unknown" (first desc))))))
 
 
 (defun asm7090-describe-codop ()
@@ -518,32 +517,8 @@
         asm-comment-char   ?*)
   (local-set-key [tab] (function tab-to-tab-stop))
   (local-set-key "" (lambda ()
-                        (interactive) 
-                        (asm7090-describe-codop) 
-                        (newline-and-indent)))
+                         (interactive) 
+                         (asm7090-describe-codop) 
+                         (newline-and-indent)))
   (font-lock-mode 1)
   (message "asm7090 activated"))
-
-
-(defvar *card-id-column* 72)
-
-(defun add-card-id (start end prefix from)
-  (interactive "r
-sPrefix: 
-nFrom:")
-  (setf prefix (subseq prefix 0 (min (length prefix) 7)))
-  (let ((nf (format "%%-%ds%s%%0%dd"
-              *card-id-column*
-              prefix
-              (- 8 (length prefix)))))
-    (save-excursion
-      (let ((end (let ((m (make-marker))) (set-marker m end))))
-        (goto-char start)
-        (while (re-search-forward "\\(.*\\)" end nil)
-          (let ((line (match-string 0)))
-            (delete-region (match-beginning 0) (match-end 0))
-            (insert (format nf
-                      (subseq line 0 (min (length line) *card-id-column*))
-                      from))
-            (forward-char 1)
-            (incf from)))))))
