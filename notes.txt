@@ -1,0 +1,85 @@
+http://mhss.nease.net/lisp1.5/node26.html
+Preparing a Card Deck
+
+
+SYSPPT  printer
+SYSPOT  output
+SYSPIT  input
+SYSTMP  
+SYSTAP
+
+bcd2bin
+bcd2cbn
+bcd2txt
+
+bin2bcd
+bin2txt
+
+cbn2bcd
+
+crd2cbn
+
+txt2bcd
+txt2bin
+
+
+bcd Binary Coded Decimal
+bin Binary
+txt ASCII text
+crd column binary file
+cbn 
+
+
+Self modifying code (supported by instruction set too)
+  ex.: storing the saved registers as immediate values in the
+       restore instructions (non re-entrant, but ok for non recursive).
+
+
+They liked to use similar looking letters a lot QO0, I1 included in
+similar looking labels: STO/STQ, EVI1/EV11, etc.
+
+
+
+
+One notes also the early style, where label names are taken  randomly
+from girlfriend first names or musical instrument names, instead of a
+more systematic or automatic naming scheme...
+
+
+Index registers can hold addresses.
+AC and MQ can hold each a cons (full word), both with its car and cdr.
+
+Hence, in the comments:
+
+   CAR(L) and CDR(L) denote the addresses of the car and cdr, 
+                     the ones found in the cons L.
+
+   CWR(CAR(L)) == (CL:CAR L)
+   CWR(CDR(L)) == (CL:CDR L)
+
+
+(ZEROP n) tests fixnum: n = 0 or float: (<= (- FLOTOL) n FLOTOL) !
+
+
+
+
+
+
+
+32768*6
+ 196608 6BIT OR 8BIT
+
+2600 FEET
+12 INCH/FOOT
+2600*12 =  31200 INCHES
+
+1600 BPI
+ 196608/80
+
+ 122.88
+
+ 123 RECORDS OF 1600 BYTES
+2458 RECORDS OF   80 BYTES
+24 MB WITH 1600 BYTE/RECORD
+ 1.2 MB WITH 80 BYTE/RECORD
+
