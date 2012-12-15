@@ -1,0 +1,34 @@
+diff -Naurtwb --exclude \#\* --exclude asm7090 --exclude \*.o --exclude \*~ asm7090-2.1.4 asm7090
+diff -Naurtwb --exclude '#*' --exclude asm7090 --exclude '*.o' --exclude '*~' asm7090-2.1.4/asmdef.h asm7090/asmdef.h
+--- asm7090-2.1.4/asmdef.h	2005-04-26 19:08:26.000000000 +0200
++++ asm7090/asmdef.h	2005-05-30 19:27:01.000000000 +0200
+@@ -51,7 +51,7 @@
+ #define MAXSYMLEN 6             /* Max length of symbol */
+ #define MAXFIELDSIZE 80         /* Max length of a MACRO field */
+ 
+-#define LINESPAGE 55            /* Max lines on a listing page */
++#define LINESPAGE 53            /* Max lines on a listing page */
+ 
+ #define MAXERRORS 3000          /* Max errors in assembly */
+ 
+diff -Naurtwb --exclude '#*' --exclude asm7090 --exclude '*.o' --exclude '*~' asm7090-2.1.4/asmpass2.c asm7090/asmpass2.c
+--- asm7090-2.1.4/asmpass2.c	2005-03-25 00:15:31.000000000 +0100
++++ asm7090/asmpass2.c	2005-06-07 13:54:54.000000000 +0200
+@@ -1649,7 +1649,7 @@
+       break;
+ 
+    case DETAIL_T:               /* DETAIL in listing */
+-      if (!fapmode)
++       /* if (!fapmode) */
+       {
+          detailmode = TRUE;
+          if (!pccmode)
+@@ -2505,7 +2505,7 @@
+       break;
+ 
+    case TITLE_T:                /* no DETAIL in listing */
+-      if (!fapmode)
++       /* if (!fapmode) */
+       {
+          detailmode = FALSE;
+          if (!pccmode)
