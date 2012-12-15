@@ -1,4 +1,3 @@
-VERSION=0.0.1
 ASM7090=/usr/local/src/emulators/7090/asm7090-2.2.2/asm7090
 LNK7090=/usr/local/src/emulators/7090/lnk7090-2.1.3/lnk7090
 UTILDIR=/usr/local/src/emulators/7090/utils-1.0.5
