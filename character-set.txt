@@ -1,0 +1,19 @@
+The character set of the 704/7090 used by LISP 1.5:
+ 
+ \lo 0      1      2      3      4      5      6      7       
+hi +----------------------------------------------------------
+0  | 0      1      2      3      4      5      6      7
+1  | 8      9      $EOF$  =      8-4MIN $IL15$ $IL16$ $IL17$
+2  | +      A      B      C      D      E      F      G
+3  | H      I      $IL32$ .      )      $IL35$ $IL36$ $IL37$
+4  | -      J      K      L      M      N      O      P  
+5  | Q      R      $IL52$ $      *      $IL55$ $IL56$ $IL57$
+6  | BLANK  /      S      T      U      V      W      X
+7  | Y      Z      $EOR$  ,      (      $IL75$ $IL76$ $IL77$
+   
+The digits are considered as their DIGIT-CHAR.
+$IL77$ was used to pad packed strings (six 6-bit chars per words).
+
+
+(length "0123456789!=!!!!+ABCDEFGHI!.)!!!-JKLMNOPQR!$*!!! /STUVWXYZ!,(!!!")
+--> 64
