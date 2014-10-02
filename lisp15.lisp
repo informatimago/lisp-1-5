@@ -912,6 +912,13 @@ or, a pointer to something else
 ;;  LETTR BCI     1,G00000
 ;;  DIGIT BCI     1,000000
 
+(defconstant +genz+ 0)
+(defconstant +genpn+ 'PNAMED)
+(defconstant +genc+  +dmask+)
+
+
+
+
 (defconstant +dmask+ #o000000077777)
 (defconstant  lettr 23)
 (defparameter digit 0)
@@ -925,7 +932,7 @@ or, a pointer to something else
   (cons
    +dmask+
    (cons
-    :pnamed
+    'pname
     (cons
      (cons
       (cons
@@ -933,7 +940,25 @@ or, a pointer to something else
                (aref ibm-7090:+charset+ (or 23 (truncate digit #o100000)))
                (mod digit #o100000))
        mq) nil) nil))))
-  
+
+(shadow 'gensym)
+
+(defconstant +dmask+ #o000000077777)
+(defvar digits 0)
+(defparameter mq 0)
+(defun gensym ()
+  (cons +dmask+
+        (cons 'pname
+              (cons
+               (cons
+                (cons
+                 (format nil "G~5,,,'0A" (mod (incf digits) 100000.))
+                 mq)
+                nil)
+               nil))))
+(gensym)
+(32767 pname (("G3.0" . 0)))
+(32767 pname (("G2.0" . 0)))
 
 
 
