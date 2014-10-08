@@ -34,19 +34,22 @@
 ;;;;**************************************************************************
 
 
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; IBM-7090 words and characters encoding.
 ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defpackage "IBM-7090"
+(cl:defpackage "IBM-7090"
   (:use "COMMON-LISP")
   (:shadow "CODE-CHAR" "CHAR-CODE")
   (:export "+CHARSET+"  "CODE-CHAR" "CHAR-CODE"
-   "CONVERT-STRING-TO-WORDS" "CONVERT-STRING-FROM-WORDS"
-   "CONVERT-BYTES-TO-WORDS"  "CONVERT-BYTES-FROM-WORDS")
+           "CONVERT-STRING-TO-WORDS" "CONVERT-STRING-FROM-WORDS"
+           "CONVERT-BYTES-TO-WORDS"  "CONVERT-BYTES-FROM-WORDS")
   (:documentation "Implements the IBM-7090 words and character encodings."))
-(in-package "IBM-7090")
+(cl:in-package "IBM-7090")
 
 
 ;; Normal encoding:
@@ -77,26 +80,26 @@ DO:     Convert a string to words; a vector of (unsigned-byte 36).
 NOTE:   An error is raised if not (every (function char-code)
                                          (subseq string start end))
 "
-  (setf start (or start 0)
-        end   (or end (length string)))
-  (flet ((safe-char-code
-          (ch)
-          (let ((result (char-code ch)))
-            (unless result
-              (error "Character '~C' cannot be encoded to IBM-7090." ch))
-            result)))
-    (loop with 6filler = (* filler #o010101010101)
-          with result = (make-array (ceiling (- end start) 6)
-                                    :element-type '(unsigned-byte 36)
-                                    :initial-element 6filler)
-          with j = -1
-          for p = 30 then (if (zerop p) 30 (- p 6))
-          for i from start below end
-          for w = (dpb (safe-char-code (aref string i))
-                       (byte 6 p) (if (= 30 p) 6filler w))
-          when (zerop p) do (setf (aref result (incf j)) w)
-          finally (progn (when (/= 30 p) (setf (aref result (incf j)) w))
-                         (return result)))))
+  (let ((start (or start 0))
+        (end   (or end (length string))))
+    (flet ((safe-char-code (ch)
+             (let ((result (char-code ch)))
+               (unless result
+                 (error "Character '~C' cannot be encoded to IBM-7090." ch))
+               result)))
+      (loop :with 6filler = (* filler #o010101010101)
+            :with result = (make-array (ceiling (- end start) 6)
+                                       :element-type '(unsigned-byte 36)
+                                       :initial-element 6filler)
+            :with j = -1
+            :for p = 30 :then (if (zerop p) 30 (- p 6))
+            :for i :from start :below end
+            :for w = (dpb (safe-char-code (aref string i))
+                          (byte 6 p) (if (= 30 p) 6filler w))
+            :when (zerop p)
+              :do (setf (aref result (incf j)) w)
+            :finally (progn (when (/= 30 p) (setf (aref result (incf j)) w))
+                            (return result))))))
 
 
 (defun convert-string-from-words (words &key start end)
@@ -109,28 +112,27 @@ NOTE:   An error is raised if not (every (function code-char)
         This means that client must specify :end when there's an invalid
         character code as filler, such as #o77.
 "
-  (setf start (or start 0)
-        end   (or end (* 6 (length words))))
-  (assert (<= 0 start (* 6 (length words)))
-          (start)
-          "START is out of bounds, should be between 0 and ~D"
-          (* 6 (length words)))
-  (assert (<= start end (* 6 (length words)))
-          (end)
-          "END is out of bounds, should be between ~D and ~D"
-          start (* 6 (length words)))
-  (if (= start end)
-    ""
-    (loop with result = (make-string (- end start)
-                                     :initial-element (character " "))
-          for i below (- end start)
-          for code = (ldb (byte 6 (- 30 (* 6 (mod (+ start i) 6))))
-                                   (aref words (truncate (+ start i) 6)))
-          for ch = (code-char code)
-          do (if ch
-               (setf (aref result i) ch)
-               (error "Invalid character code #o~O at position ~D" i))
-          finally (return result))))
+  (let ((start (or start 0))
+        (end   (or end (* 6 (length words)))))
+    (assert (<= 0 start (* 6 (length words)))
+            (start)
+            "START is out of bounds, should be between 0 and ~D"
+            (* 6 (length words)))
+    (assert (<= start end (* 6 (length words)))
+            (end)
+            "END is out of bounds, should be between ~D and ~D"
+            start (* 6 (length words)))
+    (if (= start end)
+        ""
+        (loop :with result = (make-string (- end start) :initial-element (character " "))
+              :for i :below (- end start)
+              :for code = (ldb (byte 6 (- 30 (* 6 (mod (+ start i) 6))))
+                               (aref words (truncate (+ start i) 6)))
+              :for ch = (code-char code)
+              :do (if ch
+                      (setf (aref result i) ch)
+                      (error "Invalid character code #o~O at position ~D" code i))
+              :finally (return result)))))
 
 
 (defun convert-bytes-to-words (bytes &key start end (filler #o77))
@@ -138,23 +140,24 @@ NOTE:   An error is raised if not (every (function code-char)
 DO:     Packs a sequence of (unsigned-byte 6) into a vector of
         words (unsigned-byte 36).
 "
-  (setf start (or start 0)
-        end   (or end (length bytes)))
-  (loop with 6filler = (* filler #o010101010101)
-        with get-byte = (if (listp bytes)
-                          (let ((current (nthcdr start bytes)))
-                            (lambda (i) (declare (ignore i)) (pop current)))
-                          (lambda (i) (aref bytes i)))
-        with result = (make-array (ceiling (- end start) 6)
-                                  :element-type '(unsigned-byte 36)
-                                  :initial-element 6filler)
-        with j = -1
-        for p = 30 then (if (zerop p) 30 (- p 6))
-        for i from start below end
-        for w = (dpb (funcall get-byte i) (byte 6 p) (if (= 30 p) 6filler w))
-        when (zerop p) do (setf (aref result (incf j)) w)
-        finally (progn (when (/= 30 p) (setf (aref result (incf j)) w))
-                       (return result))))
+  (let ((start (or start 0))
+        (end   (or end (length bytes))))
+    (loop :with 6filler = (* filler #o010101010101)
+          :with get-byte = (if (listp bytes)
+                               (let ((current (nthcdr start bytes)))
+                                 (lambda (i) (declare (ignore i)) (pop current)))
+                               (lambda (i) (aref bytes i)))
+          :with result = (make-array (ceiling (- end start) 6)
+                                     :element-type '(unsigned-byte 36)
+                                     :initial-element 6filler)
+          :with j = -1
+          :for p = 30 :then (if (zerop p) 30 (- p 6))
+          :for i :from start :below end
+          :for w = (dpb (funcall get-byte i) (byte 6 p) (if (= 30 p) 6filler w))
+          :when (zerop p)
+            :do (setf (aref result (incf j)) w)
+          :finally (progn (when (/= 30 p) (setf (aref result (incf j)) w))
+                          (return result)))))
 
 
 (defun convert-bytes-from-words (words &key start end)
@@ -163,20 +166,20 @@ DO:      Unpacks the vector of words (unsigned-byte 36)
          into a list of (unsigned-byte 6).
 START and END are expressed in bytes, not in words.
 "
-  (setf start (or start 0)
-        end   (or end (* 6 (length words))))
-  (assert (<= 0 start (* 6 (length words)))
-          (start)
-          "START is out of bounds, should be between 0 and ~D"
-          (* 6 (length words)))
-  (assert (<= start end (* 6 (length words)))
-          (end)
-          "END is out of bounds, should be between ~D and ~D"
-          start (* 6 (length words)))
-  (when (< start end)
-    (loop for i below (- end start)
-          collect (ldb (byte 6 (- 30 (* 6 (mod (+ start i) 6))))
-                                   (aref words (truncate (+ start i) 6))))))
+  (let ((start (or start 0))
+        (end   (or end (* 6 (length words)))))
+    (assert (<= 0 start (* 6 (length words)))
+            (start)
+            "START is out of bounds, should be between 0 and ~D"
+            (* 6 (length words)))
+    (assert (<= start end (* 6 (length words)))
+            (end)
+            "END is out of bounds, should be between ~D and ~D"
+            start (* 6 (length words)))
+    (when (< start end)
+      (loop for i below (- end start)
+            collect (ldb (byte 6 (- 30 (* 6 (mod (+ start i) 6))))
+                         (aref words (truncate (+ start i) 6)))))))
 
 
 
@@ -235,20 +238,20 @@ START and END are expressed in bytes, not in words.
 ;;;base = (tags_18 * C)|(tags_19 * B)|(tags_20 * A) +(c2) address
 ;;;addr = (if (= 3 flg) (car base) base)
 
-(defun op-code    (instruction)
-  (let ((code1 (ldb (byte 24 12))))
+(defun op-code (instruction)
+  (let ((code1 (ldb (byte 24 12) instruction)))
     (if (member code1 '(#o4760))        ; RND
-      (dpb (ldb (byte 0 15)) (byte 0 15) (ash code1 15))
-      code1)))
-            
+        (dpb (ldb (byte 0 15) instruction) (byte 0 15) (ash code1 15))
+        code1)))
 
-(defun op-flags   (instruction) (ldb (byte 22  2)))
-(defun op-count   (instruction) (ldb (byte 18  6)))
-(defun op-tags    (instruction) (ldb (byte 15  3)))
-(defun op-tag-a   (instruction) (ldb (byte 17  1)))
-(defun op-tag-b   (instruction) (ldb (byte 16  1)))
-(defun op-tag-c   (instruction) (ldb (byte 15  1)))
-(defun op-address (instruction) (ldb (byte  0 15)))
+
+(defun op-flags   (instruction) (ldb (byte 22  2) instruction))
+(defun op-count   (instruction) (ldb (byte 18  6) instruction))
+(defun op-tags    (instruction) (ldb (byte 15  3) instruction))
+(defun op-tag-a   (instruction) (ldb (byte 17  1) instruction))
+(defun op-tag-b   (instruction) (ldb (byte 16  1) instruction))
+(defun op-tag-c   (instruction) (ldb (byte 15  1) instruction))
+(defun op-address (instruction) (ldb (byte  0 15) instruction))
 
 
 
@@ -536,8 +539,8 @@ START and END are expressed in bytes, not in words.
     (iost +7 c f n y "Input-Output until Signal, then Transfer")
     ;; page 68.  Add Commands for the IBM 7909 Data Channel
     ))
-    
-        
+
+
 ;;; codop(1) x(11)
 ;;;    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ;;;    |opcod|x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x|
@@ -725,8 +728,9 @@ START and END are expressed in bytes, not in words.
 ;;;
 ;;;  LISP15-PRIMITIVES 
 ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defpackage "LISP15-PRIMITIVES"
+(cl:defpackage "LISP15-PRIMITIVES"
   (:use "COMMON-LISP")
   (:shadow "ERROR")
   (:export
@@ -735,38 +739,138 @@ START and END are expressed in bytes, not in words.
    "CONSP" "CONS" "CAR" "CDR"
    "ATOM" "T"
    "DEFUN"
-   "EQL"
+   "EQL" 
    "ERROR"
    "SETF" "TAGBODY" "GO" "LET" "LAMBDA"
-   "DEFPARAMETER" "DEFCONSTANT"
+   "DEFPARAMETER" "DEFVAR" "DEFCONSTANT"
    "AREF" "TRUNCATE" "MOD" "+" "FORMAT"
+   ;; ---
+   "INCF" "DECF" "FUNCALL" "EQUAL" "PROG" "RETURN"
    ))
-(in-package "LISP15-PRIMITIVES")
+(cl:in-package "LISP15-PRIMITIVES")
 
 
 (defmacro error (message &optional in-extenso)
-  `(common-lisp:error message))
+  (declare (ignore in-extenso))
+  `(common-lisp:error ,message))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;;  LISP15
 ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defpackage "LISP15"
+(cl:defpackage "LISP15"
   (:use "LISP15-PRIMITIVES"))
-(in-package "LISP15")
+(cl:in-package "LISP15")
 
-  
+
+
+(defun maplis (f l)
+  (cond ((null l) l)
+        ((cons (funcall f l) (maplis f (cdr l))))))
+
+;; REM FUNCTION COPY
+;; REM COPY(L)= (L=0 YIELDS 0, CAR(L)=-1 YIELDS L,
+;; REM    OTHERWISE CONS(COPY(CAR(L)),COPY(CDR(L))))
+(defun copy (l)
+  (cond ((atom l) l)
+        ((cons (copy (car l)) (copy (cdr l))))))
+
+
+;; REM FUNCTION SEARCH
+;; REM SEARCH(L,P,F,U)=(L=0 YIELDS U,P(L) YIELDS F(L),
+;; REM     OTHERWISE SEARCH (CDR(L),P,F,U))
+(defun search (l p f u)
+  (cond ((null l) u)
+        ((funcall p l) (funcall f l))
+        ((search (cdr l) p f u))))
+
 (defun consw (word)
   "
 WORD can be a cons cell, nil or a fixnum, or a char, or a float,
 or a pointer to a symbol or an array,
-or, a pointer to something else
+or a pointer to something else.
 "
   (cond
-   ((consp word) (cons (car word) (cdr word)))
-   (word)))
+    ((consp word) (cons (car word) (cdr word)))
+    (word)))
+
+
+;; REM FUNCTION EQUAL
+;; REM EQUAL(L1,L2)=(L1=L2 YIELDS1,L1=OVL2=0 YIELDS 0,
+;; REM CAR(L1)=-1VCAR(L2)=-1 YIELDS 0, OTHERWISE
+;; REM     EQUAL(CAR(L1,(CARL2))AEQUAL(CDR(L1),CDR(L2)))
+(defun equal (a b)
+  "
+EQUAL        A FUNCTION OF 2 ARGUMENTS DETERMINES WETHER 2 LIST
+             STRUCTURES ARE EQUIVELENT. REPROGRAMMED 5 OCTOBER 1960
+             TO MAKE USE OF THE NUMBER CONVENTIONS CURRENTLY IN USE.
+"
+  (cond ((eql a b) t)
+        ((null l1) l1)
+        ((null l2) l2)
+        ((equal (car a) (car b)) (equal (cdr a) (cdr b)))))
+
+
+;; EQP TESTS FOR EQ BETWEEN LISTS AND NUMERICAL EQUALITY BETWEEN
+;; NUMBERS.   USES A TOLERENCE  IN TESTIONG FLOATION PT NUMBERS
+
+
+
+;; REM PRINT(L)=(CAR(L)=-1 YIELDS PRIN1(L),1 YIELDS                 
+;; REM (PRIN2(LPAR2),PRINT(CAR(L)),(CDR(L)=0YIELDS
+;; REM PRIN2(RPAR2),1 YIELDS(PRIN2(COMMA2),PRINT
+;; REM (CDR(L))))))
+;; REM
+;; REM THE LIST L IS PRINTED IN THE RESTRICTED NOTATION
+;; REM
+;; REM PRINT REQUIRES THE SUBROUTINES PRIN1,PRIN2,
+;; REM TERPRI,MISPH2(OR UASPH2) ALL HEADED BY P
+;; REM AND SAVE,UNSAVE,ERROR UNHEADED
+(defparameter dot   " . ")
+(defparameter prblw "NIL")
+(defparameter lpar2 "(")
+(defparameter rpar2 ")")
+(defparameter comm2 " ") ; blank instead of a comman
+(defun print (l)
+  (cond ((atom l) (prin1 l))
+        (t (prin2 lpar2)
+           (print (car l))
+           (cond ((null (cdr l)) (prin2 rpar2))
+                 (t (prin2 comm2)
+                    (print (cdr l)))))))
+
+;;        REM     SUBROUTINE(PRIN1(L))                                     PAGE 060
+;; **     /       CAR(L)   N=-1 YIELDS ERROR
+;;        REM     ST = L
+;; **     A1      CDR(L) = 0 YIELDS ERROR
+;;        REM     L = CDR(L)
+;;        REM     CAR(L) = PNAME YIELDS GO(A3)
+;;        REM     CAR(L) N= FLOAT YIELDS GO(A1)
+;;        REM     L = CAR(CDR(L))
+;;        REM     VAL = FLONAM(L)
+;;        REM     REPLACD(CONS(PNAME,CONS(VAL,CDR(ST))),ST)
+;;        REM     L = CDR(ST)
+;; **     A3      L= CAR(CDR(L))
+;; **     A2      PRIN2(CWR(CAR(L))
+;;        REM     L = CDR(L)
+;;        REM                      L=0 YIELDS RETURN
+;; **     */      GO(A2)
+
+(defun prin1 (l) ; prints an atom
+  (prog (st val)
+    (cond ((atom l) (error "expected aatom"))
+          ())
+     (setf st l)
+     (cond ((null (cdr l)) (error))
+           (t (setf l (cdr l))
+              ())
+           )
+    ))
+
+
 
 
 ;; * AC := CONSW(AC)
@@ -776,8 +880,6 @@ or, a pointer to something else
 ;;            FUNCTION CP1
 ;;            CP1(L)=(L=0 YIELDS 0.
 ;;                   OTHERWISE CONS(CONSW(CWR(CAR(L)))),CP1(CDR(L))))
-
- 
 (defun cp1 (l)
   (cond ((null l) nil)
         (t (cons (consw (car l)) (cp1 (cdr l))))))
@@ -792,13 +894,16 @@ or, a pointer to something else
 
 (defun subst (l v m)
   (cond
-   ((null m)    nil)
-   ((equal m v) (copy l))
-   ((atom m)    m)
-   (t           (cons (subst l v (car m)) (subst l v (cdr m))))))
+    ((null m)    nil)
+    ((equal m v) (copy l))
+    ((atom m)    m)
+    (t           (cons (subst l v (car m)) (subst l v (cdr m))))))
 
 
-;; SUBLISP
+;; SUBLIS
+(defun sublis ()
+  )
+
 
 ;;            APPEND(L1,L2)=
 ;;            (L1=0 YIELDS L2,1 YIELDS CONS(CAR(L1),APPEND(CDR(L1),L2))
@@ -810,13 +915,13 @@ or, a pointer to something else
 
 (defun pair (key data)
   (let ((result
-         (maplis
-          (lambda (key)
-            (cond
-             ((null data) (error "*F  3*" "PAIR: SECOND ARG LIST TOO SHORT"))
-             (t           (let ((tem (car data)))
-                            (setf data (cdr data))
-                            (cons (car key) tem))))) key)))
+          (maplis
+           (lambda (key)
+             (cond
+               ((null data) (error "*F  3*" "PAIR: SECOND ARG LIST TOO SHORT"))
+               (t           (let ((tem (car data)))
+                              (setf data (cdr data))
+                              (cons (car key) tem))))) key)))
     (cond (data (error "*F  2*" "PAIR: FIRST ARG LIST TOO SHORT"))
           (t   result))))
 
@@ -829,7 +934,7 @@ or, a pointer to something else
   (cond ((null l)      nil)
         ((funcall f l) nil)
         (t             (mapcar (cdr l) f))))
-          
+
 
 ;;            MAPCON(L,F)=
 ;;            (L=0 YIELDS 0,,1 YIELDS NCONC(F(L),MAPCON(CDR(L),F)))
@@ -849,40 +954,67 @@ or, a pointer to something else
 ;;            //   RETURN(L1)
 
 (defun nconc (l1 l2)
-  (tagbody
-   (cond ((null l1) l2))
+  (prog (m)
+     (cond ((null l1) (return l2)))
+     (setf m l1)
    :a2
-   (cond ((null (cdr l1)) 
-          (go :a1))
-         (t
-          (setf l (cdr l1))
-          (go :a2)))
+     (cond ((null (cdr m)) 
+            (go :a1))
+           (t
+            (setf m (cdr m))
+            (go :a2)))
    :a1
-   (setf (cdr m) l2)
-   l1))
+     (setf (cdr m) l2)
+     (return l1)))
 
 
 ;;            REMPRP REMOVES THE PROPERTY GIVEN BY THE MQ FROM THE
 ;;            OBJECT GIVEN BY THE AC
-
 (defun remprop (object property)
   (error "remprop not implemented yet"))
 
 
-;;            PROP(O,P,U)
-;;             = (NULL(O) YIELDS U, CAR(O) = P YIELDS CDR(O),
-;;                 T YIELDS PROP(CDR(O),P,U))
-
+;; PROP(O,P,U)
+;;  = (NULL(O) YIELDS U, CAR(O) = P YIELDS CDR(O),
+;;      T YIELDS PROP(CDR(O),P,U))
 (defun prop (o p u)
-  (cond ((null o)       u)
-        ((eq (car o) p) (cdr o))
-        (t              (prop (cdr o) p u))))
+  (cond ((null o)        u)
+        ((eql (car o) p) (cdr o))
+        (t               (prop (cdr o) p u))))
+
+;; REM SASSOC(O,A,U)
+;; REM  = (NULL(A) YIELDS U, CAAR(A) YIELDS  CAR(A),
+;; REM      T YIELDS SASSOC(O,CDR(A),U))
+(defun sassoc (o a u)
+  (cond ((null a) u)
+        ((caar a) (car a))
+        (t        (sassoc o (cdr a) u))))
+
+;; REM FUNCTION ATTRIB(O,L)                                         PAGE 096
+;; REM ATTRIB(O,L)=/ CDR(O)=0 YIELDS (L REPLACES CDR(O))
+;; REM              ELSE ATTRIB(CDR(O),L)  /
+(defun attrib (o l)
+  (cond ((null (cdr o)) (rplacd (cdr o) l))
+        ((attrib (cdr o) l))))
 
 
-(defun maplist (fun l)
-  (cond ((null l) nil)
-        (t (cons (funcall fun l) (maplist fun (cdr l))))))
 
+(defun not (x)
+  (cond (x nil)
+        (t)))
+
+
+(defun rplaca (c a)
+  (setf (car c) a)
+  nil)
+
+(defun rplacd (c a)
+  (setf (cdr  c) a)
+  nil)
+
+(defun rplacw (c a)
+  (setf (cwr c) a)
+  nil)
 
 
 
@@ -912,21 +1044,22 @@ or, a pointer to something else
 ;;  LETTR BCI     1,G00000
 ;;  DIGIT BCI     1,000000
 
-(defconstant +genz+ 0)
-(defconstant +genpn+ 'PNAMED)
-(defconstant +genc+  +dmask+)
-
-
 
 
 (defconstant +dmask+ #o000000077777)
 (defconstant  lettr 23)
 (defparameter digit 0)
 
+(defconstant +genz+ 0)
+(defconstant +genpn+ 'PNAMED)
+(defconstant +genc+  +dmask+)
 
 (defparameter ac 0)
 (defparameter mq 0)
 
+(defvar digits 0)
+
+#-(and)
 (defun gensym ()
   (setf digit (+ digit 1))
   (cons
@@ -941,11 +1074,6 @@ or, a pointer to something else
                (mod digit #o100000))
        mq) nil) nil))))
 
-(shadow 'gensym)
-
-(defconstant +dmask+ #o000000077777)
-(defvar digits 0)
-(defparameter mq 0)
 (defun gensym ()
   (cons +dmask+
         (cons 'pname
@@ -956,24 +1084,125 @@ or, a pointer to something else
                  mq)
                 nil)
                nil))))
-(gensym)
-(32767 pname (("G3.0" . 0)))
-(32767 pname (("G2.0" . 0)))
+
+;; (gensym)
+;; (32767 pname (("G20000" . 0)))
+;; (32767 pname (("G3.0" . 0)))
+;; (32767 pname (("G2.0" . 0)))
+
+
+
+(defun caaar (x) (car (car (car x))))
+(defun caadr (x) (car (car (cdr x))))
+(defun cadar (x) (car (cdr (car x))))
+(defun caddr (x) (car (cdr (cdr x))))
+(defun cdaar (x) (cdr (car (car x))))
+(defun cdadr (x) (cdr (car (cdr x))))
+(defun cddar (x) (cdr (cdr (car x))))
+(defun cdddr (x) (cdr (cdr (cdr x))))
+
+(defun caar  (x) (car (car x)))
+(defun cadr  (x) (car (cdr x)))
+(defun cdar  (x) (cdr (car x)))
+(defun cddr  (x) (cdr (cdr x)))
+
+(defun get (s i) (error "GET not implemented yet."))
 
 
 
 
 
+(defparameter boffo (make-array 80))
+(defun pack (char)
+  (error "PACK not implemented yet"))
+(defun mknam ()
+  (error "MKNAM not implemented yet"))
+(defun clearbuff ()
+  (error "CLEARBUFF not implemented yet"))
+(defun unpack (name)
+  (error "UNPACK not implemented yet"))
+
+(defun logor  (a b) (cl:logior a b))
+(defun logand (a b) (cl:logand a b))
+(defun logxor (a b) (cl:logxor a b))
+(defun leftshift (x n) (cl:ash x n))
+
+(defun fixval ())
+
+;; * ARYGET       THE FUNCTION THAT GETS AND SETS THE VALUES OF ARRAYS
+;; *              USED IN LISP AS FOLLOWS ...
+;; *              TO GET A VALUE  (NAME,D1,D2,D3)
+;; *              TO SET A VLUAE   (NAME,SET,VALUE,D1,D2,D3)
+
+(defun arymak (argument)
+  (cl:destructuring-bind (name (d1 d2 d3) type) argument
+    
+    ))
+
+(defun divide (n d) (cl:multiple-value-list (cl:truncate n d)))
+(defun quoten (n d) (cl:values (cl:truncate n d)))
+(defun remain (n d) (cl:rem n d))
+(defun differ (a b) (cl:- a b))
+(defun expt   (a p) (cl:expt a p))
+(defun mult   (&rest args) (cl:apply (function cl:*)   args))
+(defun min    (&rest args) (cl:apply (function cl:min) args))
+(defun max    (&rest args) (cl:apply (function cl:max) args))
+(defun add1   (x) (cl:1+ x))
+(defun sub1   (x) (cl:1- x))
+
+(defun lesstp (a b) (cl:< a b))
+(defun numbrp (x)   (cl:numberp x))
+(defun floatp (x)   (cl:floatp x))
+(defun fixp   (x)   (cl:typep x 'cl:fixnum))
+(defun minusp (x)   (cl:minusp x))
+(defun zerop  (x)   (cl:zerop x))
+(defun onep   (x)   (cl:= 1 x))
+
+(defun unfix  (x)   (cl:float x))
+(defparameter flotol 3e-6)
+
+(defun mnsprg (x)    (cl:- x))
+(defun rcpprg (x)    (cl:/ x))
+
+;; REM APPLY(F,L,A) =
+;; REM    SELECT(CAR(L).,
+;; REM           -1,APP2(F,L,A).,
+;; REM           LAMBDA,EVAL(F,APPEND(PAIR(CADR(F),L),A)).,
+;; REM           LABEL,APPLY(CADDR(F),L,APPEND(
+;; REM                PAIR1(CADR(F),CADDR(F))),A).,
+;; REM           APPLY(EVAL(F,A),L,A))
+(defun apply (f l a)
+  (cond
+    ((atom (car l)) (app2 f l a))
+    ((eql 'lambda (car l)) (eval f (append (pair (cadr f) l) a)))
+    ((eql 'label  (car l)) (apply (caddr f) l (append (pair1 (cadr f) (caddr f))) a))
+    ((apply (eval f a) l a))))
 
 
+;; REM APP2(F,L,A)=SELECT(F.,CAR,CAAR(L).,CDR,
+;; REM CDAR(L).,CONS,CONS(CAR(L),CADR(L)).,LIST,COPY(L).,SEARCH(F,
+;; REM LAMBDA(J,CAR(J)=SUBR OR CAR(J)=EXP),
+;; REM LAMBDA(J,CAR(J)=SUBR YIELDS APP3(CWADR
+;; REM (J),DISTRIB(L)),1 YIELDS APPLY(CADR(J),L,A)))
+;; REM ERROR)
+(defun app2 (f l a)
+  (cond
+    ((eql f 'car)  (caar l))
+    ((eql f 'cdr)  (cdar l))
+    ((eql f 'cons) (cons (car l) (cadr l)))
+    ((eql f 'list) (copy l))
+    ((search f (lambda (j) (or (eql (car j) 'subr) (eql (car j) 'exp)))
+             (lambda (j) (cond ((eql (car j) 'subr) (app3 (cwadr j) (distrib l)))
+                               ((apply (cadr j) l a))))))
+    ((error "Invalid app2 expression f=~S l=~S a=~S" f l a))))
 
 
-
-
+(defun evcon ()
+  (error "EVCON not implemented yet."))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(in-package :common-lisp-user)
+(cl:in-package :common-lisp-user)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -1043,16 +1272,16 @@ or, a pointer to something else
                                                    (otherwise i))))
            ,@(loop for i from 1 to 39
                    unless (member i '(3 13 20 22 29))
-                   collect (format nil "~APJ~D" (if (< i 24) "" "    ") i))
+                     collect (format nil "~APJ~D" (if (< i 24) "" "    ") i))
            ("    ERSETO" errorset)
            ("    PVW1" "LAST OBJECT   - LEFTSHIFT")
            ))
       (format t "~72AGENER~3,'0D~%" 
               (if (atom  item)
-                (format nil "           ~A"
-                        (format nil "~A,,-*-1" item))
-                (format nil "           ~22A~{ ~A~}"
-                        (format nil "~A,,-*-1" (car item)) (cdr item)))
+                  (format nil "           ~A"
+                          (format nil "~A,,-*-1" item))
+                  (format nil "           ~22A~{ ~A~}"
+                          (format nil "~A,,-*-1" (car item)) (cdr item)))
 
               (incf line)))))
 
@@ -1083,58 +1312,58 @@ or, a pointer to something else
    (with-output-to-string (*standard-output*)
      (labels ((print-address (target) (unless (zerop target)
                                         (format t "-*-~A" (- addr target))))
-              (addressp (item) (and (consp item) (eq 'address (car item))))
+              (addressp (item) (and (consp item) (eql 'address (car item))))
               (nullp (item) (or (null item)
                                 (and (addressp item) (zerop (second item))))))
        (destructuring-bind (label cop car tag cdr comment) code
          (format t "~:[      ~;~:*~6A~] " label)
-         (format t "~:[       ~;~:*~7A~] " (unless (eq 'pze cop) cop))
+         (format t "~:[       ~;~:*~7A~] " (unless (eql 'pze cop) cop))
          (format t "~18A " 
                  (case cop
                    ((oct) (format nil "~O" car))
                    ((dec) (format nil "~D" car))
-                   ((hex) (format nil "~H" car))
+                   ((hex) (format nil "~X" car))
                    ((bcd bci) (error "BCD/BCI Not implemented yet."))
                    (otherwise
                     (with-output-to-string (*standard-output*)
                       (if (addressp car)
-                        (print-address (second car))
-                        (format t "~A" car))
+                          (print-address (second car))
+                          (format t "~A" car))
                       (when (or tag (not (nullp cdr))) (princ ","))
                       (when tag (princ tag))
                       (unless (nullp cdr)
                         (princ ",")
                         (if (addressp cdr)
-                          (print-address (second cdr))
-                          (format t "~A" cdr)))))))
+                            (print-address (second cdr))
+                            (format t "~A" cdr)))))))
          (format t "~:[~;~:*~A~]" comment))))))
 
 
 (defun generate-item (item next &key label comment)
   (cond
-   ((integerp item) (generate label 'pze item nil `(address ,next) comment))
-   ((eq 'nil  item) (generate label 'pze 0    nil `(address ,next) comment))
-   ((eq 't    item) (generate label 'pze 1    nil `(address ,next) comment))
-   ((symbolp  item) (generate label 'pze item nil `(address ,next) comment))
-   ((stringp  item) (generate label
-                              'pze `(address ,(generate-string item next))
-                              nil `(address ,next) (or comment item)))
-   ((consp    item) 
-    (case (first item)
-      ((function)
-       (generate label
-                 'pze `(address
-                         ,(generate nil 'txl (second item)
-                                    nil (third item) nil))
-                 nil `(address ,next) comment))
-      ((asm)
-       (generate label (second item) (third item) (fourth item) (fifth item)
-                 comment))
-      (otherwise
-       (generate label
-                 'pze `(address ,(generate-list item))
-                 nil `(address ,next) comment))))
-   (t (error "Invalid item ~S type ~S in plist" item (type-of item)))))
+    ((integerp item) (generate label 'pze item nil `(address ,next) comment))
+    ((eql 'nil item) (generate label 'pze 0    nil `(address ,next) comment))
+    ((eql 't   item) (generate label 'pze 1    nil `(address ,next) comment))
+    ((symbolp  item) (generate label 'pze item nil `(address ,next) comment))
+    ((stringp  item) (generate label
+                               'pze `(address ,(generate-string item next))
+                               nil  `(address ,next) (or comment item)))
+    ((consp    item) 
+     (case (first item)
+       ((function)
+        (generate label
+                  'pze `(address
+                            ,(generate nil 'txl (second item)
+                                       nil (third item) nil))
+                  nil `(address ,next) comment))
+       ((asm)
+        (generate label (second item) (third item) (fourth item) (fifth item)
+                  comment))
+       (otherwise
+        (generate label
+                  'pze `(address ,(generate-list item))
+                  nil `(address ,next) comment))))
+    (t (error "Invalid item ~S type ~S in plist" item (type-of item)))))
 
 
 (defun generate-word (word next)
@@ -1142,9 +1371,9 @@ or, a pointer to something else
             nil `(address ,next) nil))
 
 (defun generate-string (string next)
-  (loop for next = 0 then addr
+  (loop for current = next then addr
         for word in (reverse (string-to-list string))
-        for addr = (generate-word word next)
+        for addr = (generate-word word current)
         finally (return addr)))
 
 (defun generate-list (list &key comment)
@@ -1313,7 +1542,7 @@ or, a pointer to something else
     ))
 
 
-          
+
 (defun generate-plists ()
   (setf *line* -1)
   (dolist (item +symbols+)
@@ -1394,34 +1623,31 @@ or, a pointer to something else
 (defparameter +stars-sep+
   "**         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
 
-(generate-oblb)
-(generate-plists)
-
 (defun generate-plao ()
   (loop initially (setf *line* -1)
         for (code type comment pname . plist) in +alphabet+
         for label = (format nil "HH~2,'0O" code)
-        do (if (eq type 'digit)
-             (progn
-               (punch (format nil "~6a ~7a ~o"
-                              label (if (< code 8) "" "OCT") code) "GPLA")
-               (punch +stars-sep+ "GPLA"))
-             (progn
-               (punch +stars-sep+ "GPLA")
-               (generate-plist (list label
-                                     `(,@(when (member code '(#o26 #o63)) '(-1))
-                                       pname ,pname ,@plist))
-                               :id "GPLA" :comment comment)
-               )))
+        do (if (eql type 'digit)
+               (progn
+                 (punch (format nil "~6a ~7a ~o"
+                                label (if (< code 8) "" "OCT") code) "GPLA")
+                 (punch +stars-sep+ "GPLA"))
+               (progn
+                 (punch +stars-sep+ "GPLA")
+                 (generate-plist (list label
+                                       `(,@(when (member code '(#o26 #o63)) '(-1))
+                                         pname ,pname ,@plist))
+                                 :id "GPLA" :comment comment)
+                 )))
   (punch "*" "GPLA")
   (punch "*" "GPLA")
   (loop for code from #o77 downto 0 do
-        (punch (format nil "~6A ~7A ~A"
-                       (format nil ")H~2,'0O" code) ""
-                       (format nil "-1,~A,-HH~2,'0O"
-                               (if (< code 10) 1 "") code)) "GPLA"))
+    (punch (format nil "~6A ~7A ~A"
+                   (format nil ")H~2,'0O" code) ""
+                   (format nil "-1,~A,-HH~2,'0O"
+                           (if (< code 10) 1 "") code)) "GPLA"))
   (format *code-output* 
-"UPERML BSS     0
+          "UPERML BSS     0
        EJECT                                                            PAGE 217
        EJECT                                                            PAGE 218
        HEAD    0
@@ -1429,10 +1655,10 @@ or, a pointer to something else
 *
 ")
   (loop for code from 0 upto #o77 do
-        (punch (format nil "~6A ~7A ~A"
-                       (format nil "H~2,'0O" code)
-                       "SYN"
-                       (format nil "-)H~2,'0O"  code)) "GPLA")))
+    (punch (format nil "~6A ~7A ~A"
+                   (format nil "H~2,'0O" code)
+                   "SYN"
+                   (format nil "-)H~2,'0O"  code)) "GPLA")))
 
 
 (defun generate-syns ()
@@ -1453,12 +1679,16 @@ or, a pointer to something else
   (loop for n from 1 to 39
         for name = (format nil "PJ~D" n)
         do (punch  (format nil "~6A ~7A ~A" name "SYN"
-                          (format nil "-)~A" name)) "")))
+                           (format nil "-)~A" name)) "")))
 
-;; (generate-oblb)
- (generate-plists)
-;; (generate-plao)
-;; (generate-syns)
-;; (generate-pjs)
+
+
+
+#-(and) (progn
+          (generate-oblb)
+          (generate-plists)
+          (generate-plao)
+          (generate-syns)
+          (generate-pjs))
 
 ;;;; THE END ;;;;
